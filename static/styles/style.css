@@ -1,0 +1,288 @@
+/*
+================================================
+                    BODY
+================================================
+*/
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    background-color: black;
+    margin: 0;
+}
+
+/*
+================================================
+                    NAVBAR
+================================================
+*/
+
+header{
+    position: fixed;
+    width: 100%;
+}
+
+nav {
+    height: 70px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px 0 black;
+}
+
+/*
+================================================
+                LOGO IN NAVBAR
+================================================
+*/
+
+.nav_logo {
+    height: 50px;
+    opacity: 0;
+    position: absolute;
+    left: 1rem;
+}
+
+/*
+.nav_logo:hover {
+    cursor: pointer;
+}
+/*
+
+/*
+================================================
+                TEXT IN NAVBAR
+================================================
+*/
+
+.links {
+    text-decoration: none;
+    color: inherit;
+}
+
+#nav_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav_item {
+    margin: 0 20px;
+    transition: all 0.5s ease;
+}
+
+.nav_item:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+    color: #e01d3f;
+}
+
+@media (max-width: 850px) {
+    #nav_menu {
+        position: fixed;
+        top: 70px;
+        right: -125%;
+        width: 100%;
+        height: 75%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.8);
+        box-shadow: 0 0 10px 0 black;
+        transition: 0.3s ease-in-out;
+        }
+}
+
+@media (max-width: 850px) {
+    #nav_menu.active {
+        right: 0px;
+        box-sizing: border-box;
+        }
+}
+
+@media (max-width: 850px) {
+    .nav_item {
+        font-size: x-large;
+        }
+}
+
+/*
+================================================
+                DOTS IN NAVBAR
+================================================
+*/
+
+#dots_menu {
+    display: none;
+}
+
+#dots_menu > img {
+    width: 25px;
+}
+
+@media screen and (max-width: 850px) {
+    #dots_menu {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 25px;
+        margin-right: 25px;
+    }
+}
+
+/*
+================================================
+                GAME SECTION
+================================================
+*/
+
+#game_section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../ressources/gamewallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.downarrow {
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/*
+================================================
+                HOLBERTON SECTION
+================================================
+*/
+
+#holberton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#holberton_container {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    font-size: 1.5em;
+    text-align: justify;
+    margin-top: 125px;
+}
+
+#holberton_container img {
+    max-height: 300px;
+    margin-bottom: 25px;
+}
+
+#holberton_container > img:hover {
+    cursor: pointer;
+}
+
+.holberton_txt a {
+    text-decoration: none;
+    color: #e01d3f
+}
+
+.underline {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(0deg, #e01d3f, #e01d3f)no-repeat right bottom;
+    transition: background-size 0.5s;
+    background-size: 0% 1px;
+}
+
+.underline:hover::after,
+.underline:focus-visible::after {
+    background-size: 100% 1px;
+    background-position-x: left;
+}
+
+/*
+================================================
+                SCREENSHOTS
+================================================
+*/
+
+#screenshots_section {
+    padding-top: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screenshots_container {
+        width: 75%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 25px;
+}
+
+.screenshot {
+    height: 100%;
+    width:  100%;
+    border: solid 0.1rem;
+}
+
+.screenshot_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+/*
+================================================
+            SCROLLING TO TOP ARROW
+================================================
+*/
+
+.toparrow {
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    right: 0px;
+    bottom: -150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    z-index: 1;
+}
