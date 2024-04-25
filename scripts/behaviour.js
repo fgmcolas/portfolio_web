@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Toggle the "active" class of the navigation menu container
         navMenuContainer.classList.toggle("active");
         console.log("Dots Menu Toggled:", dotsMenu.classList.contains("active"));
-    console.log("Navigation Menu Toggled:", navMenuContainer.classList.contains("active"));
+        console.log("Navigation Menu Toggled:", navMenuContainer.classList.contains("active"));
     });
 
     // Select all navigation links
@@ -207,18 +207,18 @@ document.addEventListener('DOMContentLoaded', function() {
         sections.forEach(section => {
             const navLinks = document.querySelectorAll('.nav_item .links');
 
-    // Iterate over each navigation link to add an event listener
-    navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-        // Close the menu by removing the "active" class from the navigation menu container
-        navMenuContainer.classList.remove("active");
-        // Reset the dots menu icon to its initial state if necessary
-        dotsMenu.classList.remove("active");
-        console.log("Navigation Menu Removed:", navMenuContainer.classList.contains("active"));
-        console.log("Dots Menu Removed:", dotsMenu.classList.contains("active"));
-    });
-});
+        // Iterate over each navigation link to add an event listener
+        navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            // Close the menu by removing the "active" class from the navigation menu container
+            navMenuContainer.classList.remove("active");
+            // Reset the dots menu icon to its initial state if necessary
+            dotsMenu.classList.remove("active");
+                console.log("Navigation Menu Removed:", navMenuContainer.classList.contains("active"));
+                console.log("Dots Menu Removed:", dotsMenu.classList.contains("active"));
+            });
         });
+    });
 
         if (activeNav) { // If there is an active navigation link
             const navLinks = document.querySelectorAll('.links');
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setActiveNavLinks();
     });
 
-      // Call setActiveNavLinks function when scrolling occurs
+    // Call setActiveNavLinks function when scrolling occurs
     window.addEventListener('scroll', () => {
         setActiveNavLinks();
     });
