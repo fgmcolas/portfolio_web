@@ -156,7 +156,6 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 25px;
     font-size: 1.5em;
     text-align: justify;
     margin-top: 125px;
@@ -208,7 +207,7 @@ nav {
 */
 
 #screenshots_section {
-    padding-top: 95px;
+    padding-top: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
