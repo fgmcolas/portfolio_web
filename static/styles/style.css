@@ -119,7 +119,7 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-image: url(../ressources/gamewallpaper.jpg);
+    background-image: url(../ressources/background.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
