@@ -5,7 +5,7 @@
 */
 
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Night Rumble";
     color: var(--dark-text);
     background-color: var(--light-background);
     margin: 0;
@@ -92,6 +92,18 @@ nav {
 .btn_container {
     position: absolute;
     right: 25px;
+}
+
+#mute_button {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 85px;
+}
+
+#mute_button img {
+    height: 1.8rem;
+    width: 1.8rem;
 }
 
 /*
@@ -264,7 +276,7 @@ h1::after {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-align: justify;
     margin-top: 125px;
 }
@@ -372,7 +384,7 @@ h1::after {
 ================================================
 */
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1050px) {
     /* Adjust styles for smaller screens here */
 
     /* Navbar adjustments */

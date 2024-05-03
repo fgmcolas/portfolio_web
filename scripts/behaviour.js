@@ -248,4 +248,19 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', () => {
         setActiveNavLinks();
     });
+
+    // Audio and audio icons
+    var audio = document.getElementById('background_music');
+    var muteButton = document.getElementById('mute_button');
+    var muteIcon = document.getElementById('mute_icon');
+
+    muteButton.addEventListener('click', function () {
+        if (audio.muted) {
+            audio.muted = false;
+            muteIcon.src = "./ressources/sound_on.png";
+        } else {
+            audio.muted = true;
+            muteIcon.src = "./ressources/sound_off.png";
+        }
+    });
 });
