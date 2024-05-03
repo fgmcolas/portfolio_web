@@ -20,6 +20,7 @@ body {
 header{
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 
 nav {
@@ -135,16 +136,17 @@ nav {
     z-index: -1;
 }
 
-.title h1 {
+.title {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    z-index: 1;
+    height: 100vh;
+}
+
+.title h1 {
     font-family: "Heartless";
     color: var(--light-text);
-    font-size: 30vh;
+    font-size: 10vw;
     letter-spacing: 0.05em;
     text-shadow: 0 0 0.15em var(--dark-shadow);
     user-select: none;
@@ -423,6 +425,11 @@ h1::after {
     }
 
     /* Game section adjustments */
+
+    .title h1 {
+        font-size: 20vw;;
+    }
+
     .downarrow {
         width: 200px;
         height: 120px;
