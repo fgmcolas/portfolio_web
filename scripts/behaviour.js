@@ -282,28 +282,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     /////SIZE EFFECT/////
-    document.addEventListener('scroll', function() {
-        var sections = document.querySelectorAll('section');
 
-        // Calculate the current scroll position
-        var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    // Function to add active class to the current section
+    function setActiveSection() {
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav_item a');
 
-        // Iterate over each section
-        sections.forEach(function(section) {
-            var sectionTop = section.offsetTop;
-            var sectionHeight = section.offsetHeight;
-
-            // Check if the section is in the viewport
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                // Remove the 'actives' class from all sections
-                sections.forEach(function(sec) {
-                    sec.classList.remove('actives');
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                const id = section.getAttribute('id');
+                navItems.forEach(item => {
+                    if (item.getAttribute('href') === `#${id}`) {
+                        item.parentElement.classList.add('active');
+                    } else {
+                        item.parentElement.classList.remove('active');
+                    }
                 });
-
-                // Add the 'actives' class to the current section
-                section.classList.add('actives');
             }
         });
-    });
-    const sections = document.querySelectorAll('section');
+    }
+
+    // Add event listener for scrolling
+    window.addEventListener('scroll', setActiveSection);
+
+    // Initial call to set active section on page load
+    setActiveSection();
 });
