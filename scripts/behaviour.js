@@ -22,6 +22,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Select the "Holberton" link
+    const holbertonLink = document.querySelector('.nav_item a[href="#holberton_section"]');
+    // Add an event listener for click on the "Holberton" link
+    holbertonLink.addEventListener('click', function(event) {
+        console.log('#holberton_section clicked');
+        // Prevent the default behavior of the link (navigation to the anchor)
+        event.preventDefault();
+        // Select the target element you want to scroll to (here, #holberton_section)
+        const targetElement = document.querySelector('#holberton_section');
+        // Calculate the position of the target element relative to the top of the page
+        const targetOffset = targetElement.offsetTop;
+        // Perform smooth scrolling to the target element
+        window.scrollTo({
+            top: targetOffset,
+            // Smooth animation
+            behavior: 'smooth'
+        });
+    });
+
     // Select the "Screenshots" link
     const screenshotsLink = document.querySelector('.nav_item a[href="#screenshots_section"]');
     // Add an event listener for click on the "Screenshots" link
@@ -41,15 +60,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Select the "Holberton" link
-    const holbertonLink = document.querySelector('.nav_item a[href="#holberton"]');
-    // Add an event listener for click on the "Holberton" link
-    holbertonLink.addEventListener('click', function(event) {
-        console.log('#holberton_section clicked');
+    // Select the "Thanks" link
+    const thanksLink = document.querySelector('.nav_item a[href="#thanks_section"]');
+    // Add an event listener for click on the "Thanks" link
+    thanksLink.addEventListener('click', function(event) {
+        console.log('#thanks_section clicked')
         // Prevent the default behavior of the link (navigation to the anchor)
         event.preventDefault();
-        // Select the target element you want to scroll to (here, #holberton)
-        const targetElement = document.querySelector('#holberton');
+        // Select the target element you want to scroll to (here, #thanks_section)
+        const targetElement = document.querySelector('#thanks_section');
         // Calculate the position of the target element relative to the top of the page
         const targetOffset = targetElement.offsetTop;
         // Perform smooth scrolling to the target element
@@ -60,25 +79,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Select the link within the game_section
-    const gameLink = document.querySelector('#game_section a[href="#holberton"]');
-    // Add an event listener for click on the link within game_section
-    gameLink.addEventListener('click', function(event) {
-        console.log('#game_section clicked');
-        // Prevent the default behavior of the link (navigation to the anchor)
-        event.preventDefault();
-        // Select the target element you want to scroll to (here, #holberton)
-        const targetElement = document.querySelector('#holberton');
-        // Calculate the position of the target element relative to the top of the page
-        const targetOffset = targetElement.offsetTop;
-        // Perform smooth scrolling to the target element
-        window.scrollTo({
-            top: targetOffset,
-            // Smooth animation
-            behavior: 'smooth'
+        // Select the down arrow link
+        const downarrowLink = document.querySelector('#game_section a[href="#holberton_section"]');
+        // Add an event listener for click on the link within down arrow
+        downarrowLink.addEventListener('click', function(event) {
+            console.log('downarrow clicked');
+            // Prevent the default behavior of the link (navigation to the anchor)
+            event.preventDefault();
+            // Select the target element you want to scroll to (here, #holberton_section)
+            const targetElement = document.querySelector('#holberton_section');
+            // Calculate the position of the target element relative to the top of the page
+            const targetOffset = targetElement.offsetTop;
+            // Perform smooth scrolling to the target element
+            window.scrollTo({
+                top: targetOffset,
+                // Smooth animation
+                behavior: 'smooth'
+            });
         });
-    });
-
 
 
     //////////// LOGO AND ARROW BUTTON \\\\\\\\\\\\\
@@ -91,17 +109,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const arrowButton = document.querySelector(".toparrow");
     // Listen for scroll events
     window.addEventListener("scroll", () => {
-        console.log('.toparrow loaded');
         // Get the current scroll position
         let scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
         // Show or hide the arrow button and logo based on scroll position
         if (scrollPosition > 400) {
+            console.log('toparrow visible');
             // Make the logo visible
             navLogo.style.opacity = "1";
             // Show the arrow button
             arrowButton.style.bottom = "25px";
         } else {
+            console.log('toparrow unvisible');
             // Hide the logo
             navLogo.style.opacity = "0";
             // Hide the arrow button
@@ -111,6 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Listen for click events on the arrow button
     arrowButton.addEventListener("click", (onclick) => {
         // Prevent default click behavior
+        console.log('toparrow clicked');
         onclick.preventDefault();
 
         // Scroll to the top of the page smoothly
@@ -182,8 +202,6 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenuContainer.classList.remove("active");
             // Reset the dots menu icon to its initial state if necessary
             dotsMenu.classList.remove("active");
-            console.log("Navigation Menu Removed:", navMenuContainer.classList.contains("active"));
-            console.log("Dots Menu Removed:", dotsMenu.classList.contains("active"));
         });
     });
 
@@ -214,8 +232,6 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenuContainer.classList.remove("active");
             // Reset the dots menu icon to its initial state if necessary
             dotsMenu.classList.remove("active");
-                console.log("Navigation Menu Removed:", navMenuContainer.classList.contains("active"));
-                console.log("Dots Menu Removed:", dotsMenu.classList.contains("active"));
             });
         });
     });
@@ -263,4 +279,31 @@ document.addEventListener('DOMContentLoaded', function() {
             muteIcon.src = "./ressources/sound_off.png";
         }
     });
+
+
+    /////SIZE EFFECT/////
+    document.addEventListener('scroll', function() {
+        var sections = document.querySelectorAll('section');
+
+        // Calculate the current scroll position
+        var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+        // Iterate over each section
+        sections.forEach(function(section) {
+            var sectionTop = section.offsetTop;
+            var sectionHeight = section.offsetHeight;
+
+            // Check if the section is in the viewport
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                // Remove the 'actives' class from all sections
+                sections.forEach(function(sec) {
+                    sec.classList.remove('actives');
+                });
+
+                // Add the 'actives' class to the current section
+                section.classList.add('actives');
+            }
+        });
+    });
+    const sections = document.querySelectorAll('section');
 });
