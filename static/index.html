@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/night-rumble">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="../scripts/behaviour.js"></script>
+    <script src="../scripts/thanks.js"></script>
 </head>
 
 <body>
@@ -116,37 +117,45 @@
             <div class="thanks_text">
                 <p>A special thank's to all these people who helped us for many things like music, sprites, ...</p>
             </div>
-            <div class="thanks_list">
-                <ul>
-                    <li>MUSIC</li>
-                    <li>ASSETS</li>
-                    <li>TOOLS</li>
-                </ul>
-            </div>
-            <div class="thanks_detail_box">
-                <div class="thanks_detail_box_music">
-                    <p>For the music we wanted a fairly dark direction, with influences like DOOM, artists working in bass music were interested in this project</p>
+            <div class="thanks_content">
+                <div class="thanks_list">
+                    <ul>
+                        <li>MUSIC</li>
+                        <li>ASSETS</li>
+                        <li>TOOLS</li>
+                    </ul>
                 </div>
-                <div class="iridium">
-                    <p>The Iridium project was born at the end of 2O16, these French DJs / Producers<br>
-                        have set up this project with the aim of propagating a new form of brutal hardcore, signed by The Third Movement and Heresy.<br>
-                        Influenced by Electronic Music in general, they mix Hardcore and violence with Drum and Bass, Crossbreed, Dubstep, Trap, Hardtechno... Metal culture is also omnipresent, in order to add power to the sound thanks to the guitar riffs and drum patterns.
-                    </p>
+                <div class="thanks_detail_box">
+                    <div class="thanks_detail_box_music">
+                        <div class="music_detail">
+                            <p>For the music we wanted a fairly dark direction, with influences like DOOM, artists working in bass music were interested in this project</p>
+                        </div>
+                    </div>
+                    <div class="iridium">
+                        <p>The Iridium project was born at the end of 2O16, these French DJs / Producers<br>
+                            have set up this project with the aim of propagating a new form of brutal hardcore, signed by The Third Movement and Heresy.<br>
+                            Influenced by Electronic Music in general, they mix Hardcore and violence with Drum and Bass, Crossbreed, Dubstep, Trap, Hardtechno... Metal culture is also omnipresent, in order to add power to the sound thanks to the guitar riffs and drum patterns.
+                        </p>
+                    </div>
+                    <div class="nagazaki">
+                        <p>Nagazaki is a French DJ/Composer<br>
+                            He mainly composes at 175bpm, influenced by Breakcore, Dubstep, Schranz and Neurofunk. He is signed to The Third Movement and Heresy.
+                            His style is a mix between powerful hardcore kicks with lots of breakbeats, kick variations, and vocals from video games, films, series, and poetry.
+                        </p>
+                    </div>
                 </div>
-                <div class="nagazaki">
-                    <p>Nagazaki is a French DJ/Composer<br>
-                        He mainly composes at 175bpm, influenced by Breakcore, Dubstep, Schranz and Neurofunk. He is signed to The Third Movement and Heresy.
-                        His style is a mix between powerful hardcore kicks with lots of breakbeats, kick variations, and vocals from video games, films, series, and poetry.
-                    </p>
+                <div class="thanks_picture_box">
+                    <div class="thanks_picture_box_music">
+                        <div  class="thanks_picture_box_img" onclick="toggleDetails('iridium')">
+                            <img src="./ressources/thanks/iridium.png" alt="IRIDIUM">
+                        </div>
+                        <div  class="thanks_picture_box_img" onclick="toggleDetails('nagazaki')">
+                            <img src="./ressources/thanks/nagazaki.png" alt="NAGAZAKI">
+                        </div>
+                    </div>
+                    <div class="thanks_assets"></div>
+                    <div class="thanks_tools"></div>
                 </div>
-            </div>
-            <div class="thanks_picture_box">
-                <div class="thanks_picture_box_music">
-                    <img class="thanks_picture_box_img" src="./ressources/thanks/iridium.png" alt="IRIDIUM">
-                    <img class="thanks_picture_box_img" src="./ressources/thanks/nagazaki.png" alt="NAGAZAKI">
-                </div>
-                <div class="thanks_assets"></div>
-                <div class="thanks_tools"></div>
             </div>
         </div>
     </section>
