@@ -4,11 +4,21 @@
 ================================================
 */
 
+html {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
 body {
     font-family: "Night Rumble";
     color: var(--dark-text);
     background-color: var(--light-background);
     margin: 0;
+}
+
+section {
+    scroll-snap-align: start;
+    overflow: hidden;
 }
 
 /*
@@ -17,7 +27,7 @@ body {
 ================================================
 */
 
-header{
+header {
     position: fixed;
     width: 100%;
     z-index: 2;
@@ -264,13 +274,15 @@ h1::after {
 ================================================
 */
 
-#holberton {
+#holberton_section {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 #holberton_container {
+    height: 80%;
     width: 75%;
     display: flex;
     flex-direction: column;
@@ -278,7 +290,6 @@ h1::after {
     align-items: center;
     font-size: 1.2em;
     text-align: justify;
-    margin-top: 125px;
 }
 
 #holberton_container img {
@@ -322,12 +333,12 @@ h1::after {
 
 /*
 ================================================
-                SCREENSHOTS
+            SCREENSHOTS SECTION
 ================================================
 */
 
 #screenshots_section {
-    padding-top: 25px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -358,6 +369,23 @@ h1::after {
     background: var(--dark-overlay);
 }
 
+/*
+================================================
+                THANKS SECTION
+================================================
+*/
+
+#thanks_section {
+    height: 100vh;
+}
+
+#thanks_container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 125px;
+}
 /*
 ================================================
             SCROLLING TO TOP ARROW
@@ -451,16 +479,12 @@ h1::after {
     /* Holberton section adjustments */
     #holberton_container {
         width: 90%;
-        font-size: 0.8em;
+        font-size: 0.6em;
         margin-top: 50px;
     }
 
     #holberton_container img {
         max-height: 150px;
-    }
-
-    .holberton_txt {
-        font-size: 0.8em;
     }
 
     /* Screenshots section adjustments */
