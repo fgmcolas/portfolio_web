@@ -22,19 +22,21 @@
                 <source src="./ressources/Haunted Thoughts.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>-->
-            <img class="nav_logo" src="./Ressources/logo.png">
+            <img class="nav_logo" src="./Ressources/chrauma_logo.png">
             <ul id="nav_menu">
                 <li class="nav_item">
                     <a href="login.html" class="links">Login</a></li>
                 <li class="nav_item">
-                    <a href="#holberton" class="links">About</a></li>
+                    <a href="#holberton_section" class="links">About</a></li>
                 <li class="nav_item">
                     <a href="#screenshots_section" class="links">Screenshots</a> </li>
                 <li class="nav_item">
                     <a href="#game_section" class="links">DOWNLOAD</a>
                 </li>
                 <li class="nav_item">Leaderboard</li>
-                <li class="nav_item">Thanks</li>
+                <li class="nav_item">
+                    <a href="#thanks_section" class="links">Thanks</a>
+                </li>
                 <li class="nav_item">Contact</li>
             </ul>
             <div class="btn_container">
@@ -54,21 +56,21 @@
 
     <!--GAME SECTION-->
 
-    <section id="game_section">
+    <section class="actives" id="game_section">
         <video autoplay loop muted playsinline>
             <source src="./ressources/DarkCinematicBackground.mp4">
         </video>
         <div class="title">
             <h1>Chrauma</h1>
         </div>
-        <a href="#holberton">
+        <a href="#holberton_section">
             <img class="downarrow" src="./ressources/downarrow.gif" alt="down arrow">
         </a>
     </section>
 
     <!--SECTION HOLBERTON-->
 
-    <section id="holberton">
+    <section id="holberton_section">
         <div id="holberton_container">
             <a href="https://holbertonschool.com/">
                 <img src="./ressources/holberton_logo.png" alt="logo Holberton">
@@ -109,7 +111,45 @@
 
     <!--THANKS SECTION-->
 
-
+    <section id="thanks_section">
+        <div id="thanks_container">
+            <div class="thanks_text">
+                <p>A special thank's to all these people who helped us for many things like music, sprites, ...</p>
+            </div>
+            <div class="thanks_list">
+                <ul>
+                    <li>MUSIC</li>
+                    <li>ASSETS</li>
+                    <li>TOOLS</li>
+                </ul>
+            </div>
+            <div class="thanks_detail_box">
+                <div class="thanks_detail_box_music">
+                    <p>For the music we wanted a fairly dark direction, with influences like DOOM, artists working in bass music were interested in this project</p>
+                </div>
+                <div class="iridium">
+                    <p>The Iridium project was born at the end of 2O16, these French DJs / Producers<br>
+                        have set up this project with the aim of propagating a new form of brutal hardcore, signed by The Third Movement and Heresy.<br>
+                        Influenced by Electronic Music in general, they mix Hardcore and violence with Drum and Bass, Crossbreed, Dubstep, Trap, Hardtechno... Metal culture is also omnipresent, in order to add power to the sound thanks to the guitar riffs and drum patterns.
+                    </p>
+                </div>
+                <div class="nagazaki">
+                    <p>Nagazaki is a French DJ/Composer<br>
+                        He mainly composes at 175bpm, influenced by Breakcore, Dubstep, Schranz and Neurofunk. He is signed to The Third Movement and Heresy.
+                        His style is a mix between powerful hardcore kicks with lots of breakbeats, kick variations, and vocals from video games, films, series, and poetry.
+                    </p>
+                </div>
+            </div>
+            <div class="thanks_picture_box">
+                <div class="thanks_picture_box_music">
+                    <img class="thanks_picture_box_img" src="./ressources/thanks/iridium.png" alt="IRIDIUM">
+                    <img class="thanks_picture_box_img" src="./ressources/thanks/nagazaki.png" alt="NAGAZAKI">
+                </div>
+                <div class="thanks_assets"></div>
+                <div class="thanks_tools"></div>
+            </div>
+        </div>
+    </section>
 
     <!--FOOTER-->
 
