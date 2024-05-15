@@ -79,6 +79,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    ///////// DOWN ARROWS \\\\\\\\\\
+
         // Select the down arrow link
         const downarrowLink = document.querySelector('#game_section a[href="#holberton_section"]');
         // Add an event listener for click on the link within down arrow
@@ -98,8 +100,47 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
+        // Select the down arrow 2 link
+        const downarrowLink2 = document.querySelector('#holberton_section a[href="#screenshots_section"]');
+        // Add an event listener for click on the link within down arrow
+        downarrowLink2.addEventListener('click', function(event) {
+            console.log('downarrow clicked');
+            // Prevent the default behavior of the link (navigation to the anchor)
+            event.preventDefault();
+            // Select the target element you want to scroll to (here, #screenshots_section)
+            const targetElement = document.querySelector('#screenshots_section');
+            // Calculate the position of the target element relative to the top of the page
+            const targetOffset = targetElement.offsetTop;
+            // Perform smooth scrolling to the target element
+            window.scrollTo({
+                top: targetOffset,
+                // Smooth animation
+                behavior: 'smooth'
+            });
+        });
 
-    //////////// LOGO AND ARROW BUTTON \\\\\\\\\\\\\
+        // Select the down arrow 2 link
+        const downarrowLink3 = document.querySelector('#screenshots_section a[href="#thanks_section"]');
+        // Add an event listener for click on the link within down arrow
+        downarrowLink3.addEventListener('click', function(event) {
+            console.log('downarrow clicked');
+            // Prevent the default behavior of the link (navigation to the anchor)
+            event.preventDefault();
+            // Select the target element you want to scroll to (here, #thanks_section)
+            const targetElement = document.querySelector('#thanks_section');
+            // Calculate the position of the target element relative to the top of the page
+            const targetOffset = targetElement.offsetTop;
+            // Perform smooth scrolling to the target element
+            window.scrollTo({
+                top: targetOffset,
+                // Smooth animation
+                behavior: 'smooth'
+            });
+        });
+
+
+
+    //////////// LOGO AND TOP ARROW BUTTON \\\\\\\\\\\\\
 
 
 
@@ -107,6 +148,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLogo = document.querySelector(".nav_logo");
     // Select the arrow button
     const arrowButton = document.querySelector(".toparrow");
+    const backArrowButton1 = document.querySelector(".backtoparrow1");
+    const backArrowButton2 = document.querySelector(".backtoparrow2");
     // Listen for scroll events
     window.addEventListener("scroll", () => {
         // Get the current scroll position
@@ -118,15 +161,20 @@ document.addEventListener('DOMContentLoaded', function() {
             // Make the logo visible
             navLogo.style.opacity = "1";
             // Show the arrow button
-            arrowButton.style.bottom = "25px";
+            arrowButton.style.bottom = "-25px";
+            backArrowButton1.style.bottom = "-10px";
+            backArrowButton2.style.bottom = "-40px";
         } else {
             console.log('toparrow unvisible');
             // Hide the logo
             navLogo.style.opacity = "0";
             // Hide the arrow button
             arrowButton.style.bottom = "-150px";
+            backArrowButton1.style.bottom = "-135px";
+            backArrowButton2.style.bottom = "-165px";
         }
     });
+
     // Listen for click events on the arrow button
     arrowButton.addEventListener("click", (onclick) => {
         // Prevent default click behavior
