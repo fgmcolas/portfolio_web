@@ -164,6 +164,12 @@ document.addEventListener('DOMContentLoaded', function() {
             arrowButton.style.bottom = "-25px";
             backArrowButton1.style.bottom = "-10px";
             backArrowButton2.style.bottom = "-40px";
+                if (window.innerWidth <= 1050) {
+                // For screens with width less than or equal to 1050px
+                arrowButton.style.bottom = "-15px";
+                backArrowButton1.style.bottom = "-5px";
+                backArrowButton2.style.bottom = "-25px";
+            }
         } else {
             console.log('toparrow unvisible');
             // Hide the logo
