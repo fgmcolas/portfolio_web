@@ -71,6 +71,14 @@
         color: var(--dark-icon-color);
     }
 
+    .darkmode .toparrow,
+    .darkmode .backtoparrow1,
+    .darkmode .backtoparrow2,
+    .darkmode .downarrow2,
+    .darkmode .downarrow3 {
+        filter: invert(0%);
+    }
+
     /* ------------ VARIABLES ------------ */
 :root{
     /* COLORS */
