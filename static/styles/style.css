@@ -345,6 +345,7 @@ h1::after {
     transition: 0.3s ease-in-out;
     cursor: pointer;
     z-index: 1;
+    filter: invert(100%);
 }
 
 /*
@@ -362,28 +363,49 @@ h1::after {
 }
 
 .screenshots_container {
-        width: 75%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-gap: 25px;
+    width: 75%;
+    height: 75%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 25px;
 }
 
 .screenshot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     width:  100%;
     border: solid 0.1rem;
+    cursor: pointer;
+    overflow: hidden;
 }
+
+.screenshot_img {
+    max-width: 150%;
+    max-height: 150%;
+}
+
 
 .screenshot_overlay {
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 3;
     width: 100vw;
     height: 100vh;
-    object-fit: contain;
-    background: var(--dark-overlay);
+    border: none;
+    background-color: var(--dark-overlay);
+}
+
+.screenshot_overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border: solid 0.1rem var(--light-background);
 }
 
 .downarrow3 {
@@ -399,6 +421,7 @@ h1::after {
     transition: 0.3s ease-in-out;
     cursor: pointer;
     z-index: 1;
+    filter: invert(100%);
 }
 
 /*
@@ -491,7 +514,9 @@ h1::after {
 ================================================
 */
 
-.toparrow {
+.toparrow,
+.backtoparrow1,
+.backtoparrow2 {
     width: 250px;
     height: 150px;
     position: fixed;
@@ -502,35 +527,21 @@ h1::after {
     transition: 0.3s ease-in-out;
     cursor: pointer;
     transform: scaleY(-1);
+    filter: invert(100%);
+}
+
+.toparrow {
     z-index: 2;
 }
 
 .backtoparrow1 {
-    width: 250px;
-    height: 150px;
-    position: fixed;
-    right: -50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s ease-in-out;
-    transform: scaleY(-1);
-    opacity: 0.5;
     z-index: 1;
+    opacity: .5;
 }
 
 .backtoparrow2 {
-    width: 250px;
-    height: 150px;
-    position: fixed;
-    right: -50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s ease-in-out;
-    transform: scaleY(-1);
-    opacity: 0.5;
     z-index: 1;
+    opacity: .5;
 }
 
 /*
