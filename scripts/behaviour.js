@@ -194,38 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-
-
-    /////////// SECTION SCREENSHOT \\\\\\\\\\\\\\
-
-
-
-    // Select all the screenshot images within the screenshots container
-    const screenshots = document.querySelectorAll(".screenshots_container .screenshot");
-    console.log('Screenshots:', screenshots);
-
-    // Loop through each screenshot image
-    for (let screenshot of screenshots) {
-        console.log('Adding event listener to:', screenshot);
-
-        // Create a function to handle click events
-        const handleClick = (screenshot) => {
-            return () => {
-                console.log('Clicked:', screenshot);
-                // Toggle the "screenshot_overlay" class of the screenshot
-                screenshot.classList.toggle("screenshot_overlay");
-            };
-        };
-
-        // Add event listener for click event
-        screenshot.addEventListener("click", handleClick(screenshot));
-    }
-
-
-
     ////////// RESPONSIVE NAVIGATION BAR BEHAVIOR \\\\\\\\\\
-
-
 
     // Select the dots menu icon
     const dotsMenu = document.querySelector("#dots_menu");
