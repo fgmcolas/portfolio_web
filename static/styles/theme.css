@@ -79,6 +79,16 @@
         filter: invert(0%);
     }
 
+    .darkmode .modal {
+        background-color: var(--dark-color);
+    }
+
+    .darkmode,
+    .darkmode .prev,
+    .darkmode .next {
+        color: var(--light-color);
+    }
+
     /* ------------ VARIABLES ------------ */
 :root{
     /* COLORS */
