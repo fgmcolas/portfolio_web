@@ -745,12 +745,7 @@ img.hover-shadow {
     /* Holberton section adjustments */
     #holberton_container {
         width: 90%;
-        font-size: 0.6em;
         margin-top: 50px;
-    }
-
-    #holberton_container img {
-        max-height: 150px;
     }
 
     /* Screenshots section adjustments */
