@@ -75,7 +75,9 @@
     .darkmode .backtoparrow1,
     .darkmode .backtoparrow2,
     .darkmode .downarrow2,
-    .darkmode .downarrow3 {
+    .darkmode .downarrow3,
+    .darkmode .iridium_background,
+    .darkmode .nagazaki_background{
         filter: invert(0%);
     }
 

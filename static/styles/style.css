@@ -580,7 +580,7 @@ img.hover-shadow {
 .thanks_content {
     height: 75%;
     display: grid;
-    grid-template-columns: 15% 25% 60%;
+    grid-template-columns: 15% 40% 45%;
 }
 
 .thanks_detail_box {
@@ -592,6 +592,7 @@ img.hover-shadow {
 
 .thanks_picture_box {
     display: flex;
+    justify-content: center;
 }
 
 .thanks_picture_box_music {
@@ -653,7 +654,13 @@ img.hover-shadow {
     width: 100%;
     height: 100%;
     bottom: 0;
-    opacity: .5;
+    opacity: .2;
+    filter: invert(100%);
+}
+
+.iridium_background img,
+.nagazaki_background img {
+    height: 50vh;
 }
 
 /*
@@ -789,7 +796,7 @@ img.hover-shadow {
 
 /* Variables colors */
 :root {
-    --light-background: #a4928a;
+    --light-background: #ffffff;
     --holberton: #e01d3f;
     --dark-text: #000000;
     --light-text: #ffffff;
