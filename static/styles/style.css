@@ -146,7 +146,12 @@ nav {
     overflow: hidden;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    box-shadow: none;
+}
+
+#game_section.hover-shadow {
+    box-shadow: var(--holberton_shadow) 0px -50px 50px -25px inset;
+    animation: pulse 1s infinite alternate;
 }
 
 #game_section video {
@@ -207,53 +212,6 @@ h1::after {
             clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
 }
 
-@keyframes shake {
-    5%, 15%, 25%, 35%, 55%, 65%, 75%, 95% {
-        filter: blur(0.0018em);
-        transform: translateY(0.018em) rotate(0deg);
-    }
-
-    10%, 30%, 40%, 50%, 70%, 80%, 90% {
-        filter: blur(0.001em);
-        transform: translateY(-0.018em) rotate(0deg);
-    }
-
-    20%, 60% {
-        filter: blur(0.003em);
-        transform: translate(-0.018em, 0.018em) rotate(0deg);
-    }
-
-    45%, 85% {
-        filter: blur(0.003em);
-        transform: translate(0.018em, -0.018em) rotate(0deg);
-    }
-
-    100% {
-        filter: blur(0.0007em);
-        transform: translate(0) rotate(-0.5deg);
-    }
-}
-
-@keyframes crack1 {
-    0%, 95% {
-        transform: translate(-50%, -50%);
-    }
-
-    100% {
-        transform: translate(-51%, -48%);
-    }
-}
-
-@keyframes crack2 {
-    0%, 95% {
-        transform: translate(-50%, -50%);
-    }
-
-    100% {
-        transform: translate(-49%, -53%);
-    }
-}
-
 .downarrow {
     width: 250px;
     height: 150px;
@@ -281,6 +239,12 @@ h1::after {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    box-shadow: none;
+}
+
+#holberton_section.hover-shadow {
+    box-shadow: var(--holberton_shadow) 0px -50px 50px -25px inset;
+    animation: pulse 1s infinite alternate;
 }
 
 #holberton_container {
@@ -360,6 +324,12 @@ h1::after {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: none;
+}
+
+#screenshots_section.hover-shadow {
+    box-shadow: var(--holberton_shadow) 0px -50px 50px -25px inset;
+    animation: pulse 1s infinite alternate;
 }
 
 .screenshots_container {
@@ -691,12 +661,12 @@ img.hover-shadow {
 
 .backtoparrow1 {
     z-index: 1;
-    opacity: .5;
+    opacity: .50;
 }
 
 .backtoparrow2 {
     z-index: 1;
-    opacity: .5;
+    opacity: .25;
 }
 
 /*
@@ -706,7 +676,7 @@ img.hover-shadow {
 */
 
 @media screen and (max-width: 1050px) {
-    /* Adjust styles for smaller screens here */
+    /* Adjust styles for smaller screens */
 
     /* Navbar adjustments */
     nav {
@@ -788,20 +758,90 @@ img.hover-shadow {
     .toparrow,
     .backtoparrow1,
     .backtoparrow2 {
-        width: 150px;
-        height: 90px;
+        width: 200px;
+        height: 120px;
         right: -50px;
     }
 }
 
-/* Variables colors */
+/*
+================================================
+                VARIABLE COLORS
+================================================
+*/
+
 :root {
     --light-background: #ffffff;
     --holberton: #e01d3f;
+    --holberton_shadow: #e21d3e80;
     --dark-text: #000000;
     --light-text: #ffffff;
     --dark-shadow: #000000;
     --dark-nav: #000000cc;
     --hover-button: #77777780;
     --dark-overlay: #000000;
+}
+
+/*
+================================================
+                    KEYFRAMES
+================================================
+*/
+
+/* Keyframe for moving title */
+@keyframes shake {
+    5%, 15%, 25%, 35%, 55%, 65%, 75%, 95% {
+        filter: blur(0.0018em);
+        transform: translateY(0.018em) rotate(0deg);
+    }
+
+    10%, 30%, 40%, 50%, 70%, 80%, 90% {
+        filter: blur(0.001em);
+        transform: translateY(-0.018em) rotate(0deg);
+    }
+
+    20%, 60% {
+        filter: blur(0.003em);
+        transform: translate(-0.018em, 0.018em) rotate(0deg);
+    }
+
+    45%, 85% {
+        filter: blur(0.003em);
+        transform: translate(0.018em, -0.018em) rotate(0deg);
+    }
+
+    100% {
+        filter: blur(0.0007em);
+        transform: translate(0) rotate(-0.5deg);
+    }
+}
+
+@keyframes crack1 {
+    0%, 95% {
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        transform: translate(-51%, -48%);
+    }
+}
+
+@keyframes crack2 {
+    0%, 95% {
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        transform: translate(-49%, -53%);
+    }
+}
+
+/* Keyframe for pulse effects in down arrow's hover */
+@keyframes pulse {
+    0% {
+        box-shadow: var(--holberton_shadow) 0px 0px 0px 0px inset;
+    }
+    100% {
+        box-shadow: var(--holberton_shadow) 0px -50px 50px -25px inset;
+    }
 }

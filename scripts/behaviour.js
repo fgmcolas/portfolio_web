@@ -100,6 +100,18 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
+        // Hover effect
+        const gameSection = document.getElementById('game_section');
+        const downarrow = document.querySelector('.downarrow');
+
+        downarrow.addEventListener('mouseenter', function () {
+            gameSection.classList.add('hover-shadow');
+        });
+
+        downarrow.addEventListener('mouseleave', function () {
+            gameSection.classList.remove('hover-shadow');
+        });
+
         // Select the down arrow 2 link
         const downarrowLink2 = document.querySelector('#holberton_section a[href="#screenshots_section"]');
         // Add an event listener for click on the link within down arrow
@@ -119,7 +131,19 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        // Select the down arrow 2 link
+        // Hover effect
+        const holbertonSection = document.getElementById('holberton_section');
+        const downarrow2 = document.querySelector('.downarrow2');
+
+        downarrow2.addEventListener('mouseenter', function() {
+            holbertonSection.classList.add('hover-shadow');
+        });
+
+        downarrow2.addEventListener('mouseleave', function() {
+            holbertonSection.classList.remove('hover-shadow');
+        });
+
+        // Select the down arrow 3 link
         const downarrowLink3 = document.querySelector('#screenshots_section a[href="#thanks_section"]');
         // Add an event listener for click on the link within down arrow
         downarrowLink3.addEventListener('click', function(event) {
@@ -138,11 +162,21 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
+                // Hover effect
+                const screenSection = document.getElementById('screenshots_section');
+                const downarrow3 = document.querySelector('.downarrow3');
+
+                downarrow3.addEventListener('mouseenter', function() {
+                    screenSection.classList.add('hover-shadow');
+                });
+
+                downarrow3.addEventListener('mouseleave', function() {
+                    screenSection.classList.remove('hover-shadow');
+                });
 
 
-    //////////// LOGO AND TOP ARROW BUTTON \\\\\\\\\\\\\
 
-
+//////////// LOGO AND TOP ARROW BUTTON \\\\\\\\\\\\\
 
     // Select the nav logo
     const navLogo = document.querySelector(".nav_logo");
@@ -150,36 +184,74 @@ document.addEventListener('DOMContentLoaded', function() {
     const arrowButton = document.querySelector(".toparrow");
     const backArrowButton1 = document.querySelector(".backtoparrow1");
     const backArrowButton2 = document.querySelector(".backtoparrow2");
-    // Listen for scroll events
-    window.addEventListener("scroll", () => {
-        // Get the current scroll position
-        let scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-        // Show or hide the arrow button and logo based on scroll position
-        if (scrollPosition > 400) {
-            console.log('toparrow visible');
-            // Make the logo visible
-            navLogo.style.opacity = "1";
-            // Show the arrow button
-            arrowButton.style.bottom = "-25px";
-            backArrowButton1.style.bottom = "-10px";
-            backArrowButton2.style.bottom = "-40px";
-                if (window.innerWidth <= 1050) {
-                // For screens with width less than or equal to 1050px
-                arrowButton.style.bottom = "-15px";
-                backArrowButton1.style.bottom = "-5px";
-                backArrowButton2.style.bottom = "-25px";
-            }
+    // Function to add hover listeners to arrowButton
+    function addArrowButtonHoverListeners() {
+        arrowButton.addEventListener('mouseenter', onArrowButtonMouseEnter);
+        arrowButton.addEventListener('mouseleave', onArrowButtonMouseLeave);
+    }
+
+    // Function to remove hover listeners from arrowButton
+    function removeArrowButtonHoverListeners() {
+        arrowButton.removeEventListener('mouseenter', onArrowButtonMouseEnter);
+        arrowButton.removeEventListener('mouseleave', onArrowButtonMouseLeave);
+    }
+
+    // Hover event handler for arrowButton mouse enter
+    function onArrowButtonMouseEnter() {
+        if (window.innerWidth <= 1050) {
+            arrowButton.style.bottom = "-5px";
+            backArrowButton1.style.bottom = "-15px";
+            backArrowButton2.style.bottom = "-25px";
         } else {
-            console.log('toparrow unvisible');
-            // Hide the logo
-            navLogo.style.opacity = "0";
-            // Hide the arrow button
-            arrowButton.style.bottom = "-150px";
-            backArrowButton1.style.bottom = "-135px";
-            backArrowButton2.style.bottom = "-165px";
+        arrowButton.style.bottom = "-10px";
+        backArrowButton1.style.bottom = "-25px";
+        backArrowButton2.style.bottom = "-40px";
         }
-    });
+    }
+
+    // Hover event handler for arrowButton mouse leave
+    function onArrowButtonMouseLeave() {
+        arrowButton.style.bottom = "-25px";
+        backArrowButton1.style.bottom = "-25px";
+        backArrowButton2.style.bottom = "-25px";
+    }
+
+// Listen for scroll events
+window.addEventListener("scroll", () => {
+    // Get the current scroll position
+    let scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+    // Show or hide the arrow button and logo based on scroll position
+    if (scrollPosition > 400) {
+        console.log('toparrow visible');
+        // Make the logo visible
+        navLogo.style.opacity = "1";
+        // Show the arrow button
+        arrowButton.style.bottom = "-25px";
+        backArrowButton1.style.bottom = "-25px";
+        backArrowButton2.style.bottom = "-25px";
+        // Add hover listeners to arrowButton
+        addArrowButtonHoverListeners();
+        if (window.innerWidth <= 1050) {
+            // For screens with width less than or equal to 1050px
+            arrowButton.style.bottom = "-15px";
+            backArrowButton1.style.bottom = "-15px";
+            backArrowButton2.style.bottom = "-15px";
+        }
+    } else {
+        console.log('toparrow unvisible');
+        // Hide the logo
+        navLogo.style.opacity = "0";
+        // Hide the arrow button
+        arrowButton.style.bottom = "-150px";
+        backArrowButton1.style.bottom = "-150px";
+        backArrowButton2.style.bottom = "-150px";
+        // Remove hover listeners from arrowButton
+        removeArrowButtonHoverListeners();
+    }
+});
+
 
     // Listen for click events on the arrow button
     arrowButton.addEventListener("click", (onclick) => {
