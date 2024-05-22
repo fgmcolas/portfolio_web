@@ -334,8 +334,9 @@ h1::after {
 }
 
 .youtube_video {
-    width: 70%;
+    width: 60%;
     height: 70%;
+    border: solid 0.1rem;
 }
 
 .downarrow3 {
