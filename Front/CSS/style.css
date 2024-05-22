@@ -127,7 +127,7 @@ nav {
     display: none;
 }
 
-#dots_menu > img {
+#dots_menu>img {
     width: 25px;
 }
 
@@ -189,7 +189,7 @@ nav {
     left: 0;
     transform: translate(-50%, -50%);
     -webkit-clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
-            clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
+    clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
 }
 
 .title h1::before,
@@ -203,13 +203,13 @@ h1::after {
 .title h1::before {
     animation: crack1 2.5s linear forwards;
     -webkit-clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
-            clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
 }
 
 .title h1::after {
     animation: crack2 2.5s linear forwards;
     -webkit-clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
-            clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
+    clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
 }
 
 .downarrow {
@@ -217,11 +217,7 @@ h1::after {
     height: 150px;
     position: absolute;
     bottom: -30px;
-    left: 50%;
     transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: 0.3s ease-in-out;
     cursor: pointer;
     z-index: 1;
@@ -262,13 +258,13 @@ h1::after {
     max-height: 300px;
 }
 
-#holberton_container > img:hover {
+#holberton_container>img:hover {
     cursor: pointer;
 }
 
 .holberton_txt a {
     text-decoration: none;
-    color:var(--holberton)
+    color: var(--holberton)
 }
 
 .underline {
@@ -303,9 +299,39 @@ h1::after {
     bottom: -30px;
     left: 50%;
     transform: translateX(-50%);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    z-index: 1;
+    filter: invert(100%);
+}
+
+/*
+================================================
+                YOUTUBE SECTION
+================================================
+*/
+
+#trailer_section {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    box-shadow: none;
+}
+
+#trailer_section.hover-shadow {
+    box-shadow: var(--holberton_shadow) 0px -50px 50px -25px inset;
+    animation: pulse 1s infinite alternate;
+}
+
+.downarrow3 {
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
     transition: 0.3s ease-in-out;
     cursor: pointer;
     z-index: 1;
@@ -348,7 +374,7 @@ h1::after {
     justify-content: center;
     align-items: center;
     height: 100%;
-    width:  100%;
+    width: 100%;
     border: solid 0.1rem;
     cursor: pointer;
     overflow: hidden;
@@ -358,7 +384,7 @@ h1::after {
     height: 150%;
 }
 
-.row > .column {
+.row>.column {
     padding: 0 8px;
 }
 
@@ -368,7 +394,7 @@ h1::after {
     clear: both;
 }
 
-  /* Create four equal columns that floats next to eachother */
+/* Create four equal columns that floats next to eachother */
 .column_container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -381,7 +407,7 @@ h1::after {
     align-items: center;
 }
 
-  /* The Modal (background) */
+/* The Modal (background) */
 .modal {
     display: none;
     position: fixed;
@@ -398,13 +424,13 @@ h1::after {
     max-height: 75vh;
 }
 
-  /* Modal Content */
+/* Modal Content */
 .modal-content {
     position: relative;
     height: 100vh;
 }
 
-  /* The Close Button */
+/* The Close Button */
 .close {
     position: absolute;
     top: 10px;
@@ -421,7 +447,7 @@ h1::after {
     cursor: pointer;
 }
 
-  /* Hide the slides by default */
+/* Hide the slides by default */
 .mySlides {
     display: none;
 }
@@ -441,7 +467,7 @@ h1::after {
     max-width: 90%;
 }
 
-  /* Next & previous buttons */
+/* Next & previous buttons */
 .prev,
 .next {
     cursor: pointer;
@@ -458,18 +484,18 @@ h1::after {
     -webkit-user-select: none;
 }
 
-  /* Position the "next button" to the right */
+/* Position the "next button" to the right */
 .next {
     right: 0;
 }
 
-  /* On hover, add a black background color with a little bit see-through */
+/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
     background-color: var(--hover-button);
 }
 
-  /* Number text (1/3 etc) */
+/* Number text (1/3 etc) */
 .numbertext {
     font-size: 12px;
     padding: 8px 12px;
@@ -478,7 +504,7 @@ h1::after {
     left: 50%;
 }
 
-  /* Caption text */
+/* Caption text */
 .caption-container {
     text-align: center;
 }
@@ -499,23 +525,20 @@ img.demo {
 img.hover-shadow {
     transition: 0.3s;
     max-height: 100%;
-    max-width:  100%;
+    max-width: 100%;
 }
 
 .hover-shadow:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.downarrow3 {
+.downarrow4 {
     width: 250px;
     height: 150px;
     position: absolute;
     bottom: -30px;
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: 0.3s ease-in-out;
     cursor: pointer;
     z-index: 1;
@@ -601,7 +624,8 @@ img.hover-shadow {
     border-radius: 10px;
 }
 
-.iridium, .nagazaki {
+.iridium,
+.nagazaki {
     display: none;
     position: relative;
     height: 100%;
@@ -723,17 +747,21 @@ img.hover-shadow {
         right: 25px;
     }
 
-    #dots_menu > img {
+    #dots_menu>img {
         width: 20px;
     }
 
     /* Game section adjustments */
 
     .title h1 {
-        font-size: 20vw;;
+        font-size: 20vw;
+        ;
     }
 
-    .downarrow, .downarrow2, .downarrow3, .downarrow4 {
+    .downarrow,
+    .downarrow2,
+    .downarrow3,
+    .downarrow4 {
         width: 200px;
         height: 120px;
         bottom: -15px;
@@ -790,22 +818,38 @@ img.hover-shadow {
 
 /* Keyframe for moving title */
 @keyframes shake {
-    5%, 15%, 25%, 35%, 55%, 65%, 75%, 95% {
+
+    5%,
+    15%,
+    25%,
+    35%,
+    55%,
+    65%,
+    75%,
+    95% {
         filter: blur(0.0018em);
         transform: translateY(0.018em) rotate(0deg);
     }
 
-    10%, 30%, 40%, 50%, 70%, 80%, 90% {
+    10%,
+    30%,
+    40%,
+    50%,
+    70%,
+    80%,
+    90% {
         filter: blur(0.001em);
         transform: translateY(-0.018em) rotate(0deg);
     }
 
-    20%, 60% {
+    20%,
+    60% {
         filter: blur(0.003em);
         transform: translate(-0.018em, 0.018em) rotate(0deg);
     }
 
-    45%, 85% {
+    45%,
+    85% {
         filter: blur(0.003em);
         transform: translate(0.018em, -0.018em) rotate(0deg);
     }
@@ -817,7 +861,9 @@ img.hover-shadow {
 }
 
 @keyframes crack1 {
-    0%, 95% {
+
+    0%,
+    95% {
         transform: translate(-50%, -50%);
     }
 
@@ -827,7 +873,9 @@ img.hover-shadow {
 }
 
 @keyframes crack2 {
-    0%, 95% {
+
+    0%,
+    95% {
         transform: translate(-50%, -50%);
     }
 
@@ -841,6 +889,7 @@ img.hover-shadow {
     0% {
         box-shadow: var(--holberton_shadow) 0px 0px 0px 0px inset;
     }
+
     100% {
         box-shadow: var(--holberton_shadow) 0px -50px 50px -25px inset;
     }
