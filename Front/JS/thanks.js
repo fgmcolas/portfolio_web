@@ -5,7 +5,7 @@ function toggleDetails(artist) {
     var allDetails = document.querySelectorAll('.iridium, .nagazaki');
 
     // Loop through all detail divs and hide them
-    allDetails.forEach(function(detail) {
+    allDetails.forEach(function (detail) {
         detail.style.display = 'none';
     });
 
