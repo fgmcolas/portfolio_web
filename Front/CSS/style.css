@@ -325,6 +325,19 @@ h1::after {
     animation: pulse 1s infinite alternate;
 }
 
+.youtube_container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.youtube_video {
+    width: 70%;
+    height: 70%;
+}
+
 .downarrow3 {
     width: 250px;
     height: 150px;
