@@ -138,6 +138,7 @@ nav {
 */
 
 #game_section {
+    position: relative;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -147,11 +148,6 @@ nav {
     background-size: cover;
     background-position: center;
     box-shadow: none;
-}
-
-#game_section.hover-shadow {
-    box-shadow: var(--holberton_shadow) 0px -50px 50px -25px inset;
-    animation: pulse 1s infinite alternate;
 }
 
 #game_section video {
@@ -223,6 +219,17 @@ h1::after {
     z-index: 1;
 }
 
+.shadow_container.hover-shadow {
+    width: 350px;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);;
+    border-radius: 50%;
+    animation: pulse 1s infinite alternate;
+}
+
 /*
 ================================================
                 HOLBERTON SECTION
@@ -236,11 +243,6 @@ h1::after {
     align-items: center;
     height: 100vh;
     box-shadow: none;
-}
-
-#holberton_section.hover-shadow {
-    box-shadow: var(--holberton_shadow) 0px -50px 50px -25px inset;
-    animation: pulse 1s infinite alternate;
 }
 
 #holberton_container {
@@ -305,9 +307,20 @@ h1::after {
     filter: invert(100%);
 }
 
+.shadow_container2.hover-shadow {
+    width: 350px;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);;
+    border-radius: 50%;
+    animation: pulse 1s infinite alternate;
+}
+
 /*
 ================================================
-                YOUTUBE SECTION
+                TRAILER SECTION
 ================================================
 */
 
@@ -318,11 +331,6 @@ h1::after {
     align-items: center;
     height: 100vh;
     box-shadow: none;
-}
-
-#trailer_section.hover-shadow {
-    box-shadow: var(--holberton_shadow) 0px -50px 50px -25px inset;
-    animation: pulse 1s infinite alternate;
 }
 
 .youtube_container {
@@ -352,6 +360,17 @@ h1::after {
     filter: invert(100%);
 }
 
+.shadow_container3.hover-shadow {
+    width: 350px;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);;
+    border-radius: 50%;
+    animation: pulse 1s infinite alternate;
+}
+
 /*
 ================================================
             SCREENSHOTS SECTION
@@ -365,11 +384,6 @@ h1::after {
     justify-content: center;
     align-items: center;
     box-shadow: none;
-}
-
-#screenshots_section.hover-shadow {
-    box-shadow: var(--holberton_shadow) 0px -50px 50px -25px inset;
-    animation: pulse 1s infinite alternate;
 }
 
 .screenshots_container {
@@ -395,7 +409,7 @@ h1::after {
 }
 
 .screenshot img {
-    height: 150%;
+    height: 100%;
 }
 
 .screenshot img:hover {
@@ -562,6 +576,17 @@ img.hover-shadow {
     cursor: pointer;
     z-index: 1;
     filter: invert(100%);
+}
+
+.shadow_container4.hover-shadow {
+    width: 350px;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);;
+    border-radius: 50%;
+    animation: pulse 1s infinite alternate;
 }
 
 /*
@@ -906,10 +931,10 @@ img.hover-shadow {
 /* Keyframe for pulse effects in down arrow's hover */
 @keyframes pulse {
     0% {
-        box-shadow: var(--holberton_shadow) 0px 0px 0px 0px inset;
+        box-shadow: var(--holberton_shadow) 0px -10px 10px;
     }
 
     100% {
-        box-shadow: var(--holberton_shadow) 0px -50px 50px -25px inset;
+        box-shadow: var(--holberton_shadow) 0px -35px 35px;
     }
 }

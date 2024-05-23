@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Hover effect
-    const gameSection = document.getElementById('game_section');
+    const gameSection = document.querySelector('.shadow_container');
     const downarrow = document.querySelector('.downarrow');
 
     downarrow.addEventListener('mouseenter', function () {
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Hover effect
-    const holbertonSection = document.getElementById('holberton_section');
+    const holbertonSection = document.querySelector('.shadow_container2');
     const downarrow2 = document.querySelector('.downarrow2');
 
     downarrow2.addEventListener('mouseenter', function () {
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Hover effect
-    const trailerSection = document.getElementById('trailer_section');
+    const trailerSection = document.querySelector('.shadow_container3');
     const downarrow3 = document.querySelector('.downarrow3');
 
     downarrow3.addEventListener('mouseenter', function () {
@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Hover effect
-    const screenSection = document.getElementById('screenshots_section');
+    const screenSection = document.querySelector('.shadow_container4');
     const downarrow4 = document.querySelector('.downarrow4');
 
     downarrow4.addEventListener('mouseenter', function () {
