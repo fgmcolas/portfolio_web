@@ -398,6 +398,11 @@ h1::after {
     height: 150%;
 }
 
+.screenshot img:hover {
+    opacity: 0.7;
+}
+
+
 .row>.column {
     padding: 0 8px;
 }
