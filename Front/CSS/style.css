@@ -630,6 +630,12 @@ img.hover-shadow {
     width: 100%;
 }
 
+#assets_content2,
+#assets_content3 {
+    display: none;
+}
+
+
 .assets_description {
     position: relative;
     display: none;

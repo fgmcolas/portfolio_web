@@ -21,10 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
             // Show the targeted content section
             document.getElementById(targetId).style.display = 'grid';
 
-            // If the target is the "Characters" category, display the first description
-            if (targetId === 'assets_content1') {
-                descriptions[0].style.display = 'flex';
-            }
+            // Display the first description of the targeted content section
+            document.querySelector(`#${targetId} .assets_description:first-child`).style.display = 'flex';
         });
     });
 
@@ -39,9 +37,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Show the targeted description
             if (targetId === 'ghost_img') {
-                document.querySelector('.assets_description:nth-child(2)').style.display = 'flex';
+                document.querySelector('#assets_content1 .assets_description:nth-child(2)').style.display = 'flex';
             } else if (targetId === 'reaper_img') {
-                document.querySelector('.assets_description:nth-child(3)').style.display = 'flex';
+                document.querySelector('#assets_content1 .assets_description:nth-child(3)').style.display = 'flex';
+            } else if (targetId === 'scythe_img') {
+                document.querySelector('#assets_content2 .assets_description:nth-child(2)').style.display = 'flex';
+            } else if (targetId === 'bow_img') {
+                document.querySelector('#assets_content2 .assets_description:nth-child(3)').style.display = 'flex';
+            } else if (targetId === 'enemy1_img') {
+                document.querySelector('#assets_content3 .assets_description:nth-child(2)').style.display = 'flex';
+            } else if (targetId === 'enemy2_img') {
+                document.querySelector('#assets_content3 .assets_description:nth-child(3)').style.display = 'flex';
+            } else if (targetId === 'enemy3_img') {
+                document.querySelector('#assets_content3 .assets_description:nth-child(4)').style.display = 'flex';
             }
         });
     });
