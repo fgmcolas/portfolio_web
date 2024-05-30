@@ -38,9 +38,9 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             // Show the targeted description
-            if (targetId === 'cuteghost_red_img') {
+            if (targetId === 'ghost_img') {
                 document.querySelector('.assets_description:nth-child(2)').style.display = 'flex';
-            } else if (targetId === 'reaper_red_img') {
+            } else if (targetId === 'reaper_img') {
                 document.querySelector('.assets_description:nth-child(3)').style.display = 'flex';
             }
         });
