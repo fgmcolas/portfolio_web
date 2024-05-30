@@ -41,7 +41,7 @@
                     <a href="#screenshots_section" class="links">Screenshots</a>
                 </li>
                 <li class="nav_item">
-                    <a href="#thanks_section" class="links">Thanks</a>
+                    <a href="#assets_section" class="links">Assets</a>
                 </li>
                 <li class="nav_item">Contact</li>
             </ul>
@@ -120,8 +120,7 @@
 
     <section id="trailer_section">
         <div class="youtube_container">
-            <iframe class="youtube_video"
-                src="https://www.youtube-nocookie.com/embed/CQM3QDoojTk?si=XzXPSreGmQSFpyio"
+            <iframe class="youtube_video" src="https://www.youtube-nocookie.com/embed/CQM3QDoojTk?si=XzXPSreGmQSFpyio"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -249,77 +248,105 @@
                 </div>
             </div>
         </div>
-        <a href="#thanks_section">
+        <a href="#assets_section">
             <img class="downarrow4" src="../ressources/others/arrow.gif" alt="down arrow 2">
         </a>
         <div class="shadow_container4"></div>
     </section>
 
-    <!--THANKS SECTION-->
-
-    <section id="thanks_section">
-        <div id="thanks_container">
-            <div class="thanks_text">
-                <p>A special thank's to all these people who helped us for many things like music, sprites, ...</p>
+<!--ASSETS SECTION-->
+<section id="assets_section">
+    <div class="assets_container">
+        <div class="assets_category">
+            <ul>
+                <div>
+                    <li class="category-item" data-target="assets_content1">Characters</li>
+                </div>
+                <div>
+                    <li class="category-item" data-target="assets_content2">Weapons</li>
+                </div>
+                <div>
+                    <li class="category-item" data-target="assets_content3">Enemies</li>
+                </div>
+            </ul>
+        </div>
+        <div id="assets_content1" class="assets_content">
+            <div class="assets_description">
+                <div class="text_container">
+                    <p>Characters,<br> Description about Characters here.</p>
+                </div>
+                <div class="image_container">
+                    <img src="/gravestone.png" alt="Reaper Image">
+                </div>
             </div>
-            <div class="thanks_content">
-                <div class="thanks_list">
-                    <ul>
-                        <li>MUSIC</li>
-                        <li>ASSETS</li>
-                        <li>TOOLS</li>
-                    </ul>
+            <div class="assets_description">
+                <div class="text_container">
+                    <p>The Ghost<br> Description about the ghost here.</p>
                 </div>
-                <div class="thanks_detail_box">
-                    <div class="thanks_detail_box_music">
-                        <div class="music_detail">
-                            <p>For the music we wanted a fairly dark direction, with influences like DOOM, artists
-                                working in bass music were interested in this project</p>
-                        </div>
-                    </div>
-                    <div class="iridium">
-                        <div class="iridium_text">
-                            <p>The Iridium project was born at the end of 2O16, these French DJs / Producers<br>
-                                have set up this project with the aim of propagating a new form of brutal hardcore,
-                                signed by The Third Movement and Heresy.<br>
-                                Influenced by Electronic Music in general, they mix Hardcore and violence with Drum and
-                                Bass, Crossbreed, Dubstep, Trap, Hardtechno... Metal culture is also omnipresent, in
-                                order to add power to the sound thanks to the guitar riffs and drum patterns.
-                            </p>
-                        </div>
-                        <div class="iridium_background">
-                            <img src="../ressources/thanks/prototypes_logo.png" alt="logo PR">
-                        </div>
-                    </div>
-                    <div class="nagazaki">
-                        <div class="nagazaki_text">
-                            <p>Nagazaki is a French DJ/Composer<br>
-                                He mainly composes at 175bpm, influenced by Breakcore, Dubstep, Schranz and Neurofunk.
-                                He is signed to The Third Movement and Heresy.
-                                His style is a mix between powerful hardcore kicks with lots of breakbeats, kick
-                                variations, and vocals from video games, films, series, and poetry.
-                            </p>
-                        </div>
-                        <div class="nagazaki_background">
-                            <img src="../ressources/thanks/prototypes_logo.png" alt="logo PR">
-                        </div>
+                <div class="image_container">
+                    <img src="/cuteghost.png" alt="Reaper Image">
+                </div>
+            </div>
+            <div class="assets_description">
+                <div class="text_container">
+                    <p>The Reaper,<br> Description about the reaper here.</p>
+                </div>
+                <div class="image_container">
+                    <img src="/reaper.png" alt="Reaper Image">
+                </div>
+            </div>
+            <div class="assets_pictures">
+                <div class="assets_pictures_box">
+                    <div class="assets_pictures_box_img" id="cuteghost_red_img">
+                        <img src="/cuteghost_red.png">
                     </div>
                 </div>
-                <div class="thanks_picture_box">
-                    <div class="thanks_picture_box_music">
-                        <div class="thanks_picture_box_img" onclick="toggleDetails('iridium')">
-                            <img src="../ressources/thanks/iridium.png" alt="IRIDIUM">
-                        </div>
-                        <div class="thanks_picture_box_img" onclick="toggleDetails('nagazaki')">
-                            <img src="../ressources/thanks/nagazaki.png" alt="NAGAZAKI">
-                        </div>
+                <div class="assets_pictures_box">
+                    <div class="assets_pictures_box_img" id="reaper_red_img">
+                        <img src="/reaper_red.png">
                     </div>
-                    <div class="thanks_assets"></div>
-                    <div class="thanks_tools"></div>
                 </div>
             </div>
         </div>
-    </section>
+        <div id="assets_content2" class="assets_content" style="display: none;">
+            <div class="assets_description">
+                <div class="text_container">
+                    <p>Weapons,<br> Description about weapons here.</p>
+                </div>
+                <div class="image_container">
+                    <img src="/weapons.png" alt="Weapons Image">
+                </div>
+            </div>
+            <div class="assets_pictures">
+                <div class="assets_pictures_box">
+                    <img src="/weapon1.png">
+                </div>
+                <div class="assets_pictures_box">
+                    <img src="/weapon2.png">
+                </div>
+            </div>
+        </div>
+        <div id="assets_content3" class="assets_content" style="display: none;">
+            <div class="assets_description">
+                <div class="text_container">
+                    <p>Enemies,<br> Description about enemies here.</p>
+                </div>
+                <div class="image_container">
+                    <img src="/enemies.png" alt="Enemies Image">
+                </div>
+            </div>
+            <div class="assets_pictures">
+                <div class="assets_pictures_box">
+                    <img src="/enemy1.png">
+                </div>
+                <div class="assets_pictures_box">
+                    <img src="/enemy2.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <!--FOOTER-->
 
@@ -330,7 +357,7 @@
     </footer>
     <script src="../JS/behaviour.js"></script>
     <script src="../JS/theme.js"></script>
-    <script src="../JS/thanks.js"></script>
+    <script src="../JS/assets.js"></script>
     <script src="../JS/screenshots.js"></script>
 </body>
 

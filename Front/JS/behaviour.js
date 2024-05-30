@@ -79,15 +79,15 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Select the "Thanks" link
-    const thanksLink = document.querySelector('.nav_item a[href="#thanks_section"]');
-    // Add an event listener for click on the "Thanks" link
-    thanksLink.addEventListener('click', function (event) {
-        console.log('#thanks_section clicked')
+    // Select the "Assets" link
+    const assetsLink = document.querySelector('.nav_item a[href="#assets_section"]');
+    // Add an event listener for click on the "Assets" link
+    assetsLink.addEventListener('click', function (event) {
+        console.log('#assets_section clicked')
         // Prevent the default behavior of the link (navigation to the anchor)
         event.preventDefault();
-        // Select the target element you want to scroll to (here, #thanks_section)
-        const targetElement = document.querySelector('#thanks_section');
+        // Select the target element you want to scroll to (here, #assets_section)
+        const targetElement = document.querySelector('#assets_section');
         // Calculate the position of the target element relative to the top of the page
         const targetOffset = targetElement.offsetTop;
         // Perform smooth scrolling to the target element
@@ -194,14 +194,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Select the down arrow 4 link
-    const downarrowLink4 = document.querySelector('#screenshots_section a[href="#thanks_section"]');
+    const downarrowLink4 = document.querySelector('#screenshots_section a[href="#assets_section"]');
     // Add an event listener for click on the link within down arrow
     downarrowLink4.addEventListener('click', function (event) {
         console.log('downarrow4 clicked');
         // Prevent the default behavior of the link (navigation to the anchor)
         event.preventDefault();
-        // Select the target element you want to scroll to (here, #thanks_section)
-        const targetElement = document.querySelector('#thanks_section');
+        // Select the target element you want to scroll to (here, #assets_section)
+        const targetElement = document.querySelector('#assets_section');
         // Calculate the position of the target element relative to the top of the page
         const targetOffset = targetElement.offsetTop;
         // Perform smooth scrolling to the target element
