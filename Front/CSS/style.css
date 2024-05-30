@@ -614,6 +614,14 @@ img.hover-shadow {
     align-items: center;
 }
 
+.category-item {
+    margin-bottom: 50px;
+}
+
+.category-item:hover {
+    cursor: pointer;
+}
+
 .assets_content,
 .assets_content2,
 .assets_content3 {
