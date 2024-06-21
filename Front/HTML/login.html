@@ -14,16 +14,16 @@
     <div class="container">
         <div class="login__content">
             <img src="../ressources/wallpapers/ps4controller.jpg" alt="login image" class="login__img">
-            <form action="http://localhost:3000/login" method="POST" class="login__form" id="loginForm">
+            <form action="http://localhost:8080/api/auth/signin" method="POST" class="login__form" id="loginForm">
                 <div>
                     <h1 class="login__title"><span>Coucou</span> mon p'tit loup</h1>
                     <p class="login__description">C'est ici que tu rentres tes identifiants</p>
                 </div>
                 <div class="login__inputs">
                     <div>
-                        <label for="input-email" class="login__label">Nom de compte</label>
-                        <input type="email" placeholder="Tu peux le faire" required class="login__input"
-                            id="input-email">
+                        <label for="input-username" class="login__label">Nom de compte</label>
+                        <input type="username" name="username" placeholder="Tu peux le faire" required class="login__input"
+                            id="input-username">
                     </div>
                     <div>
                         <label for="input-pass" class="login__label">Mot de passe</label>

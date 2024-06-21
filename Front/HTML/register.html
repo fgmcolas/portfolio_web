@@ -14,33 +14,33 @@
     <div class="container">
         <div class="login__content">
             <img src="../ressources/wallpapers/ps4controller.jpg" alt="login image" class="login__img">
-            <form action="http://localhost:3000/register" method="POST" class="login__form" id="registerForm">
+            <form action="http://localhost:8080/api/auth/signup" method="POST" class="login__form" id="registerForm">
                 <div>
                     <h1 class="login__title"><span>Coucou</span> mon p'tit loup</h1>
                     <p class="login__description">Prêt à créé ton compte ?</p>
                 </div>
                 <div class="login__inputs">
                     <div>
-                        <label for="input-email" class="login__label">Nom de compte</label>
-                        <input type="email" placeholder="Tu peux le faire" required class="login__input"
-                            id="input-email">
+                        <label for="input-username" class="login__label">Nom de compte</label>
+                        <input type="username" name="username" placeholder="Tu peux le faire" required class="login__input"
+                            id="input-username">
                     </div>
                     <div>
                         <label for="input-pass" class="login__label">Mot de passe</label>
                         <div class="login__box">
-                            <input type="password" placeholder="Met chaussure par exemple" required class="login__input"
+                            <input type="password" name="password" placeholder="Met chaussure par exemple" required class="login__input"
                                 id="input-pass">
                             <i class="ri-eye-off-line login__eye" id="input-icon"></i>
                         </div>
                     </div>
-                    <div>
+                    <!--<div>
                         <label for="input-pass-2" class="login__label">Recopie le mot de passe</label>
                         <div class="login__box">
-                            <input type="password" placeholder="Réécris chaussure" required class="login__input"
+                            <input type="password" name="password" placeholder="Réécris chaussure" required class="login__input"
                                 id="input-pass-2">
                             <i class="ri-eye-off-line login__eye" id="input-icon-2"></i>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
                 <div class="login__check">
                     <input type="checkbox" class="login__check-input" id="input-check">
