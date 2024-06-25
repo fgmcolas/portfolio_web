@@ -5,7 +5,7 @@ document.getElementById('registerForm').addEventListener('submit', async functio
     const password = document.getElementById('input-pass').value;
     const messageDiv = document.getElementById('registerMessage');
 
-    console.log("Données de soumission :", { username, password });
+    console.log("Submission data:", { username, password });
 
     try {
         const response = await fetch('http://localhost:8080/api/auth/signup', {
@@ -16,10 +16,10 @@ document.getElementById('registerForm').addEventListener('submit', async functio
             body: JSON.stringify({ username, password }),
         });
 
-        console.log("Réponse du serveur :", response);
+        console.log("Server response:", response);
 
         if (response.ok) {
-            messageDiv.innerHTML = '<p>Compte créé avec succès ! Redirection vers la page de login...</p>';
+            messageDiv.innerHTML = '<p>Account successfully created! Redirecting to login page...</p>';
             messageDiv.classList.remove('error');
             messageDiv.classList.add('success');
             setTimeout(() => {
@@ -27,14 +27,14 @@ document.getElementById('registerForm').addEventListener('submit', async functio
             }, 2000);
         } else {
             const result = await response.json();
-            console.log("Erreur serveur :", result);
-            messageDiv.innerHTML = `<p>${result.message || 'Une erreur est survenue'}</p>`;
+            console.log("Server error:", result);
+            messageDiv.innerHTML = `<p>${result.message || 'An error occurred'}</p>`;
             messageDiv.classList.remove('success');
             messageDiv.classList.add('error');
         }
     } catch (error) {
-        console.log("Erreur de requête :", error);
-        messageDiv.innerHTML = `<p>Erreur : ${error.message}</p>`;
+        console.log("Request error:", error);
+        messageDiv.innerHTML = `<p>Error: ${error.message}</p>`;
         messageDiv.classList.remove('success');
         messageDiv.classList.add('error');
     }
