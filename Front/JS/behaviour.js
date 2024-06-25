@@ -224,6 +224,37 @@ document.addEventListener('DOMContentLoaded', function () {
         screenSection.classList.remove('hover-shadow');
     });
 
+    // Select the down arrow 5 link
+    const downarrowLink5 = document.querySelector('#assets_section a[href="#contact_section"]');
+    // Add an event listener for click on the link within down arrow
+    downarrowLink5.addEventListener('click', function (event) {
+        console.log('downarrow5 clicked');
+        // Prevent the default behavior of the link (navigation to the anchor)
+        event.preventDefault();
+        // Select the target element you want to scroll to (here, #contact_section)
+        const targetElement = document.querySelector('#contact_section');
+        // Calculate the position of the target element relative to the top of the page
+        const targetOffset = targetElement.offsetTop;
+        // Perform smooth scrolling to the target element
+        window.scrollTo({
+            top: targetOffset,
+            // Smooth animation
+            behavior: 'smooth'
+        });
+    });
+
+    // Hover effect
+    const contactSection = document.querySelector('.shadow_container5');
+    const downarrow5 = document.querySelector('.downarrow5');
+
+    downarrow5.addEventListener('mouseenter', function () {
+        screenSection.classList.add('hover-shadow');
+    });
+
+    downarrow5.addEventListener('mouseleave', function () {
+        screenSection.classList.remove('hover-shadow');
+    });
+
 
     //////////// LOGO AND TOP ARROW BUTTON \\\\\\\\\\\\\
 

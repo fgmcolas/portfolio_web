@@ -599,6 +599,7 @@ img.hover-shadow {
 
 #assets_section {
     height: 100vh;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -698,7 +699,6 @@ img.hover-shadow {
     transition: width 0.3s ease;
 }
 
-
 .assets_pictures_box_img:hover {
     cursor: pointer;
     width: 25vw;
@@ -711,6 +711,45 @@ img.hover-shadow {
     height: 100%;
     box-shadow: 0 0 50px inset var(--assets-box);
     border-radius: 10px;
+}
+
+.downarrow5 {
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    z-index: 1;
+    filter: invert(100%);
+}
+
+.shadow_container5.hover-shadow {
+    width: 350px;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    transform: translateX(-50%) translateY(100%);;
+    border-radius: 50%;
+    animation: pulse 1s infinite alternate;
+}
+
+/*
+================================================
+                CONTACT SECTION
+================================================
+*/
+
+#contact_section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-shadow: none;
 }
 
 /*
@@ -817,7 +856,8 @@ img.hover-shadow {
     .downarrow,
     .downarrow2,
     .downarrow3,
-    .downarrow4 {
+    .downarrow4,
+    .downarrow5 {
         width: 200px;
         height: 120px;
         bottom: -15px;
