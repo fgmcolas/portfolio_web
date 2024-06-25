@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="icon" href="../ressources/logos/headlogo.png">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/feast-of-flesh-bb-2">
     <link rel="stylesheet" href="../CSS/login.css">
     <title>Login</title>
 </head>
@@ -13,22 +14,22 @@
 <body>
     <div class="container">
         <div class="login__content">
-            <img src="../ressources/wallpapers/ps4controller.jpg" alt="login image" class="login__img">
+            <img src="../ressources/wallpapers/logobackground.jpg" alt="login image" class="login__img">
             <form action="http://localhost:8080/api/auth/signin" method="POST" class="login__form" id="loginForm">
                 <div>
-                    <h1 class="login__title"><span>Coucou</span> mon p'tit loup</h1>
-                    <p class="login__description">C'est ici que tu rentres tes identifiants</p>
+                    <h1 class="login__title"><span>Welcome</span> human</h1>
+                    <p class="login__description">Here you'll put your ID's</p>
                 </div>
                 <div class="login__inputs">
                     <div>
-                        <label for="input-username" class="login__label">Nom de compte</label>
-                        <input type="username" name="username" placeholder="Tu peux le faire" required class="login__input"
+                        <label for="input-username" class="login__label">Username</label>
+                        <input type="username" name="username" placeholder="You can do it" required class="login__input"
                             id="input-username">
                     </div>
                     <div>
-                        <label for="input-pass" class="login__label">Mot de passe</label>
+                        <label for="input-pass" class="login__label">Password</label>
                         <div class="login__box">
-                            <input type="password" name="password" placeholder="Met chaussure par exemple" required class="login__input"
+                            <input type="password" name="password" placeholder="Please remember" required class="login__input"
                                 id="input-pass">
                             <i class="ri-eye-off-line login__eye" id="input-icon"></i>
                         </div>
@@ -37,14 +38,14 @@
                 <div id="loginMessage" class="message"></div>
                 <div class="login__check">
                     <input type="checkbox" class="login__check-input" id="input-check">
-                    <label for="input-check" class="login__check-label">Ne m'oublie pas</label>
+                    <label for="input-check" class="login__check-label">Don't forget me</label>
                 </div>
                 <div class="login__buttons">
-                    <button type="submit" class="login__button">Connexion</button>
+                    <button type="submit" class="login__button">Login</button>
                     <button type="button" class="login__button login__button-ghost"
-                        onclick="window.location.href='./register.html';">Inscription</button>
+                        onclick="window.location.href='./register.html';">Register</button>
                 </div>
-                <a href="./index.html" class="login__forgot">T'as encore oublié ton mdp ? Démerdes-toi</a>
+                <a href="./index.html" class="login__forgot">You forgot your password again ? Get it sorted</a>
             </form>
         </div>
     </div>
