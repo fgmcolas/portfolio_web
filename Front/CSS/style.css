@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    font-family: "Night Rumble";
+    font-family: "Feast of Flesh BB", sans-serif;
     color: var(--dark-text);
     background-color: var(--light-background);
     margin: 0;
@@ -410,10 +410,12 @@ h1::after {
 
 .screenshot img {
     height: 100%;
+    transition: height 0.5s;
 }
 
 .screenshot img:hover {
     opacity: 0.7;
+    height: 150%;
 }
 
 
