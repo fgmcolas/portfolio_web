@@ -752,6 +752,126 @@ img.hover-shadow {
     box-shadow: none;
 }
 
+.contact_container {
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+    height: 75vh;
+}
+
+.team_container {
+    text-align: center;
+}
+
+.team_container h2 {
+    margin: 0;
+}
+
+.team {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.dev_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+}
+
+.dev {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem;
+    width: 33%;
+    height: 100%;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: 30% 20% 50%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    border: solid 0.1rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card_picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 100%; /* Assurez-vous que le conteneur est un carré */
+    position: relative;
+    overflow: hidden;
+}
+
+.card_picture img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card_name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+}
+
+.name {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.card_description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 50%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.socials {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.socials_container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.socials_logo {
+    max-width: 2vw;
+}
+
+.socials_description a {
+    padding-left: 10px;
+    text-decoration: none;
+    color: var(--light-text);
+}
+
 /*
 ================================================
             SCROLLING TO TOP ARROW
