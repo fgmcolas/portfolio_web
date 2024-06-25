@@ -1,10 +1,10 @@
 :root {
-    --first-color: hsl(249, 64%, 47%);
-    --second-color: hsl(244, 100%, 25%);
-    --title-color: hsl(244, 12%, 12%);
-    --text-color: hsl(244, 4%, 36%);
+    --first-color: hsl(0, 64%, 47%);
+    --second-color: hsl(0, 100%, 25%);
+    --title-color: hsl(0, 11%, 12%);
+    --text-color: hsl(0, 4%, 36%);
     --body-color: hsl(0, 0%, 0%, 0.95);
-    --body-font: "Poppins", sans-serif;
+    --body-font: "Feast of Flesh BB", sans-serif;
     --h2-font-size: 1.25rem;
     --small-font-size: 0.813rem;
     --smaller-font-size: 0.75rem;
@@ -63,6 +63,7 @@ img {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    transform: scaleX(-1);
 }
 
 .login__form {
@@ -188,7 +189,7 @@ img {
     color: #fff;
     font-size: var(--small-font-size);
     font-weight: var(--font-semi-bold);
-    box-shadow: 0 6px 24px hsla(244, 75%, 48%, 0.5);
+    box-shadow: 0 6px 24px hsla(0, 75%, 48%, 0.5);
     margin-bottom: 1rem;
     cursor: pointer;
 }
@@ -228,13 +229,13 @@ img {
     }
 
     .login__content {
-        width: 1024px;
-        height: 600px;
+        width: 1624px;
+        height: 300px;
     }
 
     .login__img {
         border-radius: 3.5rem;
-        box-shadow: 0 24px 48px hsla(244, 75%, 36%, 0.45);
+        box-shadow: 0 24px 48px hsla(0, 75%, 36%, 0.45);
     }
 
     .login__form {
@@ -285,4 +286,17 @@ img {
     .login__button-ghost {
         border: 2.5px solid var(--first-color);
     }
+}
+
+#input-username,
+#input-pass,
+#loginMessage,
+#registerMessage {
+    font-family: none, sans-serif;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    color: hsla(350, 77%, 50%, 0.75)
 }
