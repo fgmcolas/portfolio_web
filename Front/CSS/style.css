@@ -808,7 +808,7 @@ img.hover-shadow {
     align-items: center;
     justify-content: center;
     max-width: 100%;
-    max-height: 100%; /* Assurez-vous que le conteneur est un carré */
+    max-height: 100%;
     position: relative;
     overflow: hidden;
 }
