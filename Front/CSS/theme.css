@@ -78,9 +78,19 @@
     .darkmode .downarrow3,
     .darkmode .downarrow4,
     .darkmode .downarrow5,
-    .darkmode .iridium_background,
-    .darkmode .nagazaki_background {
+    .darkmode .leftarrow,
+    .darkmode .rightarrow {
         filter: invert(0%);
+    }
+
+    .darkmode #github {
+        filter: invert(0%);
+    }
+
+    .darkmode .socials_description a {
+        padding: 10px;
+        text-decoration: none;
+        color: var(--light-text);
     }
 
     .darkmode .modal {
@@ -101,4 +111,5 @@
         --dark-icon-color: #fff;
         --light-color: #f7f7f7;
         --light-icon-color: #FFDE59;
+        --light-text: #ffffff;
     }

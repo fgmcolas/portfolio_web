@@ -98,24 +98,24 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-        // Select the "Contact" link
-        const contactLink = document.querySelector('.nav_item a[href="#contact_section"]');
-        // Add an event listener for click on the "Contact" link
-        contactLink.addEventListener('click', function (event) {
-            console.log('#contact_section clicked')
-            // Prevent the default behavior of the link (navigation to the anchor)
-            event.preventDefault();
-            // Select the target element you want to scroll to (here, #contact_section)
-            const targetElement = document.querySelector('#contact_section');
-            // Calculate the position of the target element relative to the top of the page
-            const targetOffset = targetElement.offsetTop;
-            // Perform smooth scrolling to the target element
-            window.scrollTo({
-                top: targetOffset,
-                // Smooth animation
-                behavior: 'smooth'
-            });
+    // Select the "Contact" link
+    const contactLink = document.querySelector('.nav_item a[href="#contact_section"]');
+    // Add an event listener for click on the "Contact" link
+    contactLink.addEventListener('click', function (event) {
+        console.log('#contact_section clicked')
+        // Prevent the default behavior of the link (navigation to the anchor)
+        event.preventDefault();
+        // Select the target element you want to scroll to (here, #contact_section)
+        const targetElement = document.querySelector('#contact_section');
+        // Calculate the position of the target element relative to the top of the page
+        const targetOffset = targetElement.offsetTop;
+        // Perform smooth scrolling to the target element
+        window.scrollTo({
+            top: targetOffset,
+            // Smooth animation
+            behavior: 'smooth'
         });
+    });
 
     ///////// DOWN ARROWS \\\\\\\\\\
 
@@ -232,15 +232,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Hover effect
-    const screenSection = document.querySelector('.shadow_container4');
+    const assetsSection = document.querySelector('.shadow_container4');
     const downarrow4 = document.querySelector('.downarrow4');
 
     downarrow4.addEventListener('mouseenter', function () {
-        screenSection.classList.add('hover-shadow');
+        assetsSection.classList.add('hover-shadow');
     });
 
     downarrow4.addEventListener('mouseleave', function () {
-        screenSection.classList.remove('hover-shadow');
+        assetsSection.classList.remove('hover-shadow');
     });
 
     // Select the down arrow 5 link
@@ -263,15 +263,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Hover effect
-    const contactSection = document.querySelector('.shadow_container5');
+    const assetSection = document.querySelector('.shadow_container5');
     const downarrow5 = document.querySelector('.downarrow5');
 
     downarrow5.addEventListener('mouseenter', function () {
-        screenSection.classList.add('hover-shadow');
+        assetSection.classList.add('hover-shadow');
     });
 
     downarrow5.addEventListener('mouseleave', function () {
-        screenSection.classList.remove('hover-shadow');
+        assetSection.classList.remove('hover-shadow');
     });
 
 
@@ -503,4 +503,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Initial call to set active section on page load
     setActiveSection();
+
+
+
+    ///// ARROW EVENTS FOR CONTACT SECTION ///////
+
+    // Selecting DOM elements
+    const contactContainer = document.querySelector('.contact_container');
+    const contactContainer2 = document.querySelector('.contact_container2');
+    const leftArrow = document.querySelector('.leftarrow');
+    const rightArrow = document.querySelector('.rightarrow');
+
+    // Function to display section 2 and hide section 1
+    function showSection2() {
+        console.log("Click on rightarrow: display contact_container2 and leftarrow");
+        contactContainer.style.transform = 'translateX(-200%)';
+        rightArrow.classList.add('hidden');
+        contactContainer2.style.transform = 'translateX(0)';
+        leftArrow.classList.remove('hidden');
+    }
+
+    function showSection1() {
+        console.log("Click on leftarrow: display contact_container and rightarrow");
+        contactContainer.style.transform = 'translateX(0)';
+        rightArrow.classList.remove('hidden');
+        contactContainer2.style.transform = 'translateX(200%)';
+        leftArrow.classList.add('hidden');
+    }
+
+    // Adding event listeners for left and right arrows
+    rightArrow.addEventListener('click', showSection2);
+    leftArrow.addEventListener('click', showSection1);
 });

@@ -731,7 +731,7 @@ img.hover-shadow {
     height: 250px;
     position: absolute;
     bottom: 0;
-    left: 25%;
+    left: 50%;
     transform: translateX(-50%) translateY(100%);;
     border-radius: 50%;
     animation: pulse 1s infinite alternate;
@@ -749,14 +749,29 @@ img.hover-shadow {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100vw;
     box-shadow: none;
 }
 
 .contact_container {
     display: flex;
     flex-direction: column;
-    width: 75vw;
-    height: 75vh;
+    justify-content: center;
+    width: 90%;
+    height: 75%;
+    position: absolute;
+    transition: transform 0.5s ease;
+}
+
+.contact_container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75%;
+    height: 75%;
+    position: absolute;
+    transition: transform 0.5s ease;
+    transform: translateX(200%);
 }
 
 .team_container {
@@ -770,14 +785,16 @@ img.hover-shadow {
 .team {
     font-size: 2rem;
     font-weight: bold;
+    padding-bottom: 5%;
 }
 
 .dev_container {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 50%;
+    height: 75%;
 }
 
 .dev {
@@ -785,8 +802,20 @@ img.hover-shadow {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    margin: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     width: 33%;
+    height: 100%;
+}
+
+.artist {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
     height: 100%;
 }
 
@@ -797,9 +826,20 @@ img.hover-shadow {
     justify-content: flex-start;
     align-items: center;
     height: 100%;
+    width: 100%;
+    border: solid 0.1rem;
+    overflow: hidden;
+}
+
+.card2 {
+    display: grid;
+    grid-template-rows: 40% 20% 40%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
     width: 50%;
     border: solid 0.1rem;
-    cursor: pointer;
     overflow: hidden;
 }
 
@@ -843,12 +883,22 @@ img.hover-shadow {
 
 .socials {
     display: flex;
-    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
     width: 50%;
     height: 100%;
     padding-left: 10px;
     padding-right: 5px;
+}
+
+.socials2 {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    padding-left: 5px;
+    padding-right: 10px;
 }
 
 .socials_container {
@@ -862,14 +912,59 @@ img.hover-shadow {
     padding-right: 5px;
 }
 
+.socials_container2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
 .socials_logo {
     max-width: 2vw;
 }
 
+#github {
+    filter: invert(100%);
+}
+
 .socials_description a {
-    padding-left: 10px;
+    padding: 10px;
     text-decoration: none;
-    color: var(--light-text);
+    color: var(--dark-text);
+}
+
+.leftarrow {
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    z-index: 1;
+    filter: invert(100%);
+}
+
+.rightarrow {
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    z-index: 1;
+    filter: invert(100%);
+}
+
+.hidden {
+    display: none;
 }
 
 /*
