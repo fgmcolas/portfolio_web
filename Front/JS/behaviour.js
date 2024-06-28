@@ -467,10 +467,10 @@ document.addEventListener('DOMContentLoaded', function () {
     muteButton.addEventListener('click', function () {
         if (audio.muted) {
             audio.muted = false;
-            muteIcon.src = "./ressources/sound_on.png";
+            muteIcon.src = "../ressources/others/sound_on.png";
         } else {
             audio.muted = true;
-            muteIcon.src = "./ressources/sound_off.png";
+            muteIcon.src = "../ressources/others/sound_off.png";
         }
     });
 
