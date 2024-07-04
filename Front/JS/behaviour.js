@@ -41,9 +41,28 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Select the "Slides" link
+    const slidesLink = document.querySelector('.nav_item a[href="#slides_section"]');
+    // Add an event listener for click on the "Slides" link
+    slidesLink.addEventListener('click', function (event) {
+        console.log('#slides_section clicked')
+        // Prevent the default behavior of the link (navigation to the anchor)
+        event.preventDefault();
+        // Select the target element you want to scroll to (here, #slides_section)
+        const targetElement = document.querySelector('#slides_section');
+        // Calculate the position of the target element relative to the top of the page
+        const targetOffset = targetElement.offsetTop;
+        // Perform smooth scrolling to the target element
+        window.scrollTo({
+            top: targetOffset,
+            // Smooth animation
+            behavior: 'smooth'
+        });
+    });
+
     // Select the "Trailer" link
     const trailerLink = document.querySelector('.nav_item a[href="#trailer_section"]');
-    // Add an event listener for click on the "Trauker" link
+    // Add an event listener for click on the "Trailer" link
     trailerLink.addEventListener('click', function (event) {
         console.log('#trailer_section clicked')
         // Prevent the default behavior of the link (navigation to the anchor)
@@ -151,14 +170,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Select the down arrow 2 link
-    const downarrowLink2 = document.querySelector('#holberton_section a[href="#trailer_section"]');
+    const downarrowLink2 = document.querySelector('#holberton_section a[href="#slides_section"]');
     // Add an event listener for click on the link within down arrow
     downarrowLink2.addEventListener('click', function (event) {
         console.log('downarrow2 clicked');
         // Prevent the default behavior of the link (navigation to the anchor)
         event.preventDefault();
-        // Select the target element you want to scroll to (here, #trailer_section)
-        const targetElement = document.querySelector('#trailer_section');
+        // Select the target element you want to scroll to (here, #slides_section)
+        const targetElement = document.querySelector('#slides_section');
         // Calculate the position of the target element relative to the top of the page
         const targetOffset = targetElement.offsetTop;
         // Perform smooth scrolling to the target element
@@ -182,10 +201,41 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Select the down arrow 3 link
-    const downarrowLink3 = document.querySelector('#trailer_section a[href="#screenshots_section"]');
+    const downarrowLink3 = document.querySelector('#slides_section a[href="#trailer_section"]');
     // Add an event listener for click on the link within down arrow
     downarrowLink3.addEventListener('click', function (event) {
         console.log('downarrow3 clicked');
+        // Prevent the default behavior of the link (navigation to the anchor)
+        event.preventDefault();
+        // Select the target element you want to scroll to (here, #trailer_section)
+        const targetElement = document.querySelector('#trailer_section');
+        // Calculate the position of the target element relative to the top of the page
+        const targetOffset = targetElement.offsetTop;
+        // Perform smooth scrolling to the target element
+        window.scrollTo({
+            top: targetOffset,
+            // Smooth animation
+            behavior: 'smooth'
+        });
+    });
+
+    // Hover effect
+    const slidesSection = document.querySelector('.shadow_container3');
+    const downarrow3 = document.querySelector('.downarrow3');
+
+    downarrow3.addEventListener('mouseenter', function () {
+        slidesSection.classList.add('hover-shadow');
+    });
+
+    downarrow3.addEventListener('mouseleave', function () {
+        slidesSection.classList.remove('hover-shadow');
+    });
+
+    // Select the down arrow 4 link
+    const downarrowLink4 = document.querySelector('#trailer_section a[href="#screenshots_section"]');
+    // Add an event listener for click on the link within down arrow
+    downarrowLink4.addEventListener('click', function (event) {
+        console.log('downarrow4 clicked');
         // Prevent the default behavior of the link (navigation to the anchor)
         event.preventDefault();
         // Select the target element you want to scroll to (here, #screenshots_section)
@@ -201,22 +251,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Hover effect
-    const trailerSection = document.querySelector('.shadow_container3');
-    const downarrow3 = document.querySelector('.downarrow3');
+    const trailerSection = document.querySelector('.shadow_container4');
+    const downarrow4 = document.querySelector('.downarrow4');
 
-    downarrow3.addEventListener('mouseenter', function () {
+    downarrow4.addEventListener('mouseenter', function () {
         trailerSection.classList.add('hover-shadow');
     });
 
-    downarrow3.addEventListener('mouseleave', function () {
+    downarrow4.addEventListener('mouseleave', function () {
         trailerSection.classList.remove('hover-shadow');
     });
 
     // Select the down arrow 4 link
-    const downarrowLink4 = document.querySelector('#screenshots_section a[href="#assets_section"]');
+    const downarrowLink5 = document.querySelector('#screenshots_section a[href="#assets_section"]');
     // Add an event listener for click on the link within down arrow
-    downarrowLink4.addEventListener('click', function (event) {
-        console.log('downarrow4 clicked');
+    downarrowLink5.addEventListener('click', function (event) {
+        console.log('downarrow5 clicked');
         // Prevent the default behavior of the link (navigation to the anchor)
         event.preventDefault();
         // Select the target element you want to scroll to (here, #assets_section)
@@ -232,22 +282,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Hover effect
-    const assetsSection = document.querySelector('.shadow_container4');
-    const downarrow4 = document.querySelector('.downarrow4');
+    const assetsSection = document.querySelector('.shadow_container5');
+    const downarrow5 = document.querySelector('.downarrow5');
 
-    downarrow4.addEventListener('mouseenter', function () {
+    downarrow5.addEventListener('mouseenter', function () {
         assetsSection.classList.add('hover-shadow');
     });
 
-    downarrow4.addEventListener('mouseleave', function () {
+    downarrow5.addEventListener('mouseleave', function () {
         assetsSection.classList.remove('hover-shadow');
     });
 
-    // Select the down arrow 5 link
-    const downarrowLink5 = document.querySelector('#assets_section a[href="#contact_section"]');
+    // Select the down arrow 6 link
+    const downarrowLink6 = document.querySelector('#assets_section a[href="#contact_section"]');
     // Add an event listener for click on the link within down arrow
-    downarrowLink5.addEventListener('click', function (event) {
-        console.log('downarrow5 clicked');
+    downarrowLink6.addEventListener('click', function (event) {
+        console.log('downarrow6 clicked');
         // Prevent the default behavior of the link (navigation to the anchor)
         event.preventDefault();
         // Select the target element you want to scroll to (here, #contact_section)
@@ -263,14 +313,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Hover effect
-    const assetSection = document.querySelector('.shadow_container5');
-    const downarrow5 = document.querySelector('.downarrow5');
+    const assetSection = document.querySelector('.shadow_container6');
+    const downarrow6 = document.querySelector('.downarrow6');
 
-    downarrow5.addEventListener('mouseenter', function () {
+    downarrow6.addEventListener('mouseenter', function () {
         assetSection.classList.add('hover-shadow');
     });
 
-    downarrow5.addEventListener('mouseleave', function () {
+    downarrow6.addEventListener('mouseleave', function () {
         assetSection.classList.remove('hover-shadow');
     });
 

@@ -78,6 +78,7 @@
     .darkmode .downarrow3,
     .darkmode .downarrow4,
     .darkmode .downarrow5,
+    .darkmode .downarrow6,
     .darkmode .leftarrow,
     .darkmode .rightarrow {
         filter: invert(0%);

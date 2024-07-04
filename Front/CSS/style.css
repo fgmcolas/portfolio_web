@@ -320,6 +320,53 @@ h1::after {
 
 /*
 ================================================
+                SLIDES SECTION
+================================================
+*/
+
+#slides_section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-shadow: none;
+}
+
+.slides_container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.downarrow3 {
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    z-index: 1;
+    filter: invert(100%);
+}
+
+.shadow_container3.hover-shadow {
+    width: 350px;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);;
+    border-radius: 50%;
+    animation: pulse 1s infinite alternate;
+}
+
+/*
+================================================
                 TRAILER SECTION
 ================================================
 */
@@ -347,7 +394,7 @@ h1::after {
     border: solid 0.1rem;
 }
 
-.downarrow3 {
+.downarrow4 {
     width: 250px;
     height: 150px;
     position: absolute;
@@ -360,7 +407,7 @@ h1::after {
     filter: invert(100%);
 }
 
-.shadow_container3.hover-shadow {
+.shadow_container4.hover-shadow {
     width: 350px;
     height: 250px;
     position: absolute;
@@ -567,7 +614,7 @@ img.hover-shadow {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.downarrow4 {
+.downarrow5 {
     width: 250px;
     height: 150px;
     position: absolute;
@@ -580,7 +627,7 @@ img.hover-shadow {
     filter: invert(100%);
 }
 
-.shadow_container4.hover-shadow {
+.shadow_container5.hover-shadow {
     width: 350px;
     height: 250px;
     position: absolute;
@@ -713,7 +760,7 @@ img.hover-shadow {
     border-radius: 10px;
 }
 
-.downarrow5 {
+.downarrow6 {
     width: 250px;
     height: 150px;
     position: absolute;
@@ -726,7 +773,7 @@ img.hover-shadow {
     filter: invert(100%);
 }
 
-.shadow_container5.hover-shadow {
+.shadow_container6.hover-shadow {
     width: 350px;
     height: 250px;
     position: absolute;
