@@ -220,15 +220,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Hover effect
-    const slidesSection = document.querySelector('.shadow_container3');
+    const slideSection = document.querySelector('.shadow_container3');
     const downarrow3 = document.querySelector('.downarrow3');
 
     downarrow3.addEventListener('mouseenter', function () {
-        slidesSection.classList.add('hover-shadow');
+        slideSection.classList.add('hover-shadow');
     });
 
     downarrow3.addEventListener('mouseleave', function () {
-        slidesSection.classList.remove('hover-shadow');
+        slideSection.classList.remove('hover-shadow');
     });
 
     // Select the down arrow 4 link
@@ -584,4 +584,36 @@ document.addEventListener('DOMContentLoaded', function () {
     // Adding event listeners for left and right arrows
     rightArrow.addEventListener('click', showSection2);
     leftArrow.addEventListener('click', showSection1);
+
+    ///// SLIDESHOW IN SLIDES SECTION /////
+
+    const slidesContainer = document.querySelector('.slides_container');
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    let currentSlide = 0;
+
+    document.querySelector('.next').addEventListener('click', function () {
+        moveToNextSlide();
+    });
+
+    document.querySelector('.prev').addEventListener('click', function () {
+        moveToPrevSlide();
+    });
+
+    function moveToNextSlide() {
+        currentSlide = (currentSlide === totalSlides - 1) ? 0 : currentSlide + 1;
+        updateSlidePosition();
+    }
+
+    function moveToPrevSlide() {
+        currentSlide = (currentSlide === 0) ? totalSlides - 1 : currentSlide - 1;
+        updateSlidePosition();
+    }
+
+    function updateSlidePosition() {
+        const slideWidth = slides[0].clientWidth;
+        slidesContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+    }
+
+    updateSlidePosition();
 });
