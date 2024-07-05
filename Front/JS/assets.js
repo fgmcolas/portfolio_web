@@ -48,8 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.querySelector('#assets_content3 .assets_description:nth-child(2)').style.display = 'flex';
             } else if (targetId === 'enemy2_img') {
                 document.querySelector('#assets_content3 .assets_description:nth-child(3)').style.display = 'flex';
-            } else if (targetId === 'enemy3_img') {
-                document.querySelector('#assets_content3 .assets_description:nth-child(4)').style.display = 'flex';
             }
         });
     });
