@@ -357,6 +357,7 @@ h1::after {
 
 .slide img {
     width: 100%;
+    margin-top: 2rem;
     display: block;
 }
 
