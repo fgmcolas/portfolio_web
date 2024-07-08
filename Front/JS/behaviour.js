@@ -384,9 +384,9 @@ document.addEventListener('DOMContentLoaded', function () {
             addArrowButtonHoverListeners();
             if (window.innerWidth <= 1050) {
                 // For screens with width less than or equal to 1050px
-                arrowButton.style.bottom = "-15px";
-                backArrowButton1.style.bottom = "-15px";
-                backArrowButton2.style.bottom = "-15px";
+                arrowButton.style.bottom = "-75px";
+                backArrowButton1.style.bottom = "-75px";
+                backArrowButton2.style.bottom = "-75px";
             }
         } else {
             console.log('toparrow unvisible');
