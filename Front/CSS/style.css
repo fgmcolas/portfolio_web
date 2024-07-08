@@ -63,12 +63,6 @@ nav {
 }
 
 /*
-.nav_logo:hover {
-    cursor: pointer;
-}
-/*
-
-/*
 ================================================
                 TEXT IN NAVBAR
 ================================================
@@ -1148,6 +1142,12 @@ img.hover-shadow {
         position: static;
     }
 
+    #mute_button img {
+        height: 6rem;
+        width: 6rem;
+        padding-right: 50px;
+    }
+
     #dots_menu {
         display: block;
         cursor: pointer;
@@ -1156,7 +1156,7 @@ img.hover-shadow {
     }
 
     #dots_menu>img {
-        width: 20px;
+        width: 60px;
     }
 
     /* Game section adjustments */
