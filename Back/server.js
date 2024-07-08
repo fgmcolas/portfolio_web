@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const cookieSession = require("cookie-session");
+const mongoose = require("mongoose");
 
 const dbConfig = require("./config/db.config");
 
@@ -27,11 +28,11 @@ app.use(
         httpOnly: true
     })
 );
-
+  
 const db = require("./models");
 
-db.mongoose
-    .connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`, {
+mongoose
+    .connect(`mongodb+srv://fgmcolas:5YGhztwCD8M9xjxk@cluster0.qtw7iwq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
