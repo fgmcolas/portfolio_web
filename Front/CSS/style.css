@@ -1359,6 +1359,7 @@ img.hover-shadow {
 
     .socials {
         width: 50%;
+        z-index: 5;
     }
 
     .socials_logo {
