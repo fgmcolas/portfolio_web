@@ -1201,6 +1201,14 @@ img.hover-shadow {
         margin: 50px;
     }
 
+    /* Youtube section adjustments */
+
+    .youtube_video {
+        width: 90%;
+        height: 30%;
+        border: solid 0.1rem;
+    }
+
     /* Scroll to top arrow adjustments */
     .toparrow,
     .backtoparrow1,
