@@ -1359,7 +1359,6 @@ img.hover-shadow {
 
     .socials {
         width: 50%;
-        z-index: 5;
     }
 
     .socials_logo {
@@ -1371,6 +1370,10 @@ img.hover-shadow {
 
     .contact_container {
         justify-content: flex-start;
+    }
+
+    .artist {
+        height: 50%;
     }
 
     .leftarrow {
