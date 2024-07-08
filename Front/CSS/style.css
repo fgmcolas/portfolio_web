@@ -1181,6 +1181,10 @@ img.hover-shadow {
         margin-top: 50px;
     }
 
+    #holberton_container {
+        font-size: 2em;
+    }
+
     /* Screenshots section adjustments */
     .screenshots_container {
         width: 90%;
