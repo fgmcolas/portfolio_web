@@ -1327,8 +1327,7 @@ img.hover-shadow {
     }
 
     .image_container {
-        margin-top: 350px;
-        left: 50%;
+        display: none;
     }
 
     .assets_pictures {
@@ -1341,7 +1340,7 @@ img.hover-shadow {
     .assets_pictures_box_img {
         height: 25vh;
         width: 40vw;
-        margin-top: 250px;
+        margin-top: 500px;
     }
 }
 
