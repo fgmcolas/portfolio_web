@@ -1345,15 +1345,11 @@ img.hover-shadow {
 
     /* Contact section adjustments */
 
-    /* #contact_section {
-        font-size: xxx-large;
-    } */
-
     #contact_section h2 {
         font-size: 60px;
     }
 
-    .name, .socials_container {
+    .name, .socials_container, .socials_container2 {
         font-size: 50px;
     }
 
@@ -1361,10 +1357,15 @@ img.hover-shadow {
         font-size: 20px;
     }
 
+    .socials {
+        width: 50%;
+    }
+
     .socials_logo {
         max-width: 6vw;
         padding-top: 20px;
         padding-right: 20px;
+        padding-left: 20px;
     }
 
     .contact_container {
@@ -1392,7 +1393,7 @@ img.hover-shadow {
         flex-direction: row;
         width: 100%;
         margin: 10px;
-        max-height: 40%;
+        height: 40%;
     }
 
     /* Scroll to top arrow adjustments */
