@@ -1343,6 +1343,58 @@ img.hover-shadow {
         margin-top: 350px;
     }
 
+    /* Contact section adjustments */
+
+    /* #contact_section {
+        font-size: xxx-large;
+    } */
+
+    #contact_section h2 {
+        font-size: 60px;
+    }
+
+    .name, .socials_container {
+        font-size: 50px;
+    }
+
+    .card_description p {
+        font-size: 30px;
+    }
+
+    .socials_logo {
+        max-width: 6vw;
+        padding-top: 20px;
+        padding-right: 20px;
+    }
+
+    .contact_container {
+        justify-content: flex-start;
+    }
+
+    .leftarrow {
+        width: 600px;
+        height: 360px;
+        left: -25%;
+    }
+
+    .rightarrow {
+        width: 600px;
+        height: 360px;
+        right: -25%;
+    }
+
+    .dev_container {
+        flex-direction: column;
+        margin-top: 250px;
+    }
+
+    .dev {
+        flex-direction: row;
+        width: 100%;
+        margin: 10px;
+        max-height: 40%;
+    }
+
     /* Scroll to top arrow adjustments */
     .toparrow,
     .backtoparrow1,
@@ -1353,8 +1405,6 @@ img.hover-shadow {
         left: 50%;
     }
 }
-
-
 
 /*
 ================================================
