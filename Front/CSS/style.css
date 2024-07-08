@@ -624,9 +624,10 @@ h1::after {
 .numbertext {
     font-size: 12px;
     padding: 8px 12px;
-    position: relative;
+    position: absolute;
     top: 0;
     left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Caption text */
@@ -1223,11 +1224,18 @@ img.hover-shadow {
     }
 
     .numbertext,
-    .close,
     .modal-content>.prev,
     .modal-content>.next,
     #caption {
         font-size: xxx-large;
+    }
+
+    .close {
+        font-size: 100px;
+    }
+
+    .numbertext {
+        padding-top: 5%;
     }
 
     .modal-content>.prev,
