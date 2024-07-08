@@ -1112,18 +1112,18 @@ img.hover-shadow {
 
     /* Navbar adjustments */
     nav {
-        max-height: 25px;
+        height: 200px;
         position: relative;
     }
 
     .nav_logo {
-        height: 50px;
+        height: 200px;
         opacity: 0;
     }
 
     #nav_menu {
         position: fixed;
-        top: 27px;
+        top: 200px;
         right: -125%;
         width: 100%;
         height: 33%;
@@ -1170,10 +1170,9 @@ img.hover-shadow {
     .downarrow2,
     .downarrow3,
     .downarrow4,
-    .downarrow5 {
-        width: 200px;
-        height: 120px;
-        bottom: -15px;
+    .downarrow5,
+    .downarrow6 {
+        display: none;
     }
 
     /* Holberton section adjustments */
@@ -1195,9 +1194,10 @@ img.hover-shadow {
     .toparrow,
     .backtoparrow1,
     .backtoparrow2 {
-        width: 200px;
-        height: 120px;
-        right: -50px;
+        width: 600px;
+        height: 360px;
+        transform: translateX(-50%) scaleY(-1);
+        left: 50%;
     }
 }
 

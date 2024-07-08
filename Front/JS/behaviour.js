@@ -372,7 +372,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
         // Show or hide the arrow button and logo based on scroll position
-        if (scrollPosition > 400) {
+        if (scrollPosition > 800) {
             console.log('toparrow visible');
             // Make the logo visible
             navLogo.style.opacity = "1";
@@ -393,9 +393,9 @@ document.addEventListener('DOMContentLoaded', function () {
             // Hide the logo
             navLogo.style.opacity = "0";
             // Hide the arrow button
-            arrowButton.style.bottom = "-150px";
-            backArrowButton1.style.bottom = "-150px";
-            backArrowButton2.style.bottom = "-150px";
+            arrowButton.style.bottom = "-500px";
+            backArrowButton1.style.bottom = "-500px";
+            backArrowButton2.style.bottom = "-500px";
             // Remove hover listeners from arrowButton
             removeArrowButtonHoverListeners();
         }
@@ -517,10 +517,10 @@ document.addEventListener('DOMContentLoaded', function () {
     muteButton.addEventListener('click', function () {
         if (audio.muted) {
             audio.muted = false;
-            muteIcon.src = "../ressources/others/sound_on.png";
+            muteIcon.src = "./ressources/others/sound_on.png";
         } else {
             audio.muted = true;
-            muteIcon.src = "../ressources/others/sound_off.png";
+            muteIcon.src = "./ressources/others/sound_off.png";
         }
     });
 
