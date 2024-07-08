@@ -1256,15 +1256,17 @@ img.hover-shadow {
         max-width: 100%;
     }
 
-    #caption, .column_container {
+    #caption {
         position: relative;
-        top: -500px;
+        top: -520px;
     }
 
     .column_container {
         display: grid;
         grid-template-columns: repeat(2, 3fr);
         grid-gap: 10px;
+        position: relative;
+        top: -450px;
     }
 
     /* Scroll to top arrow adjustments */
