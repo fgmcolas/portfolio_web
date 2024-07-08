@@ -23,7 +23,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
             messageDiv.classList.remove('error');
             messageDiv.classList.add('success');
             setTimeout(() => {
-                window.location.href = './index.html';
+                window.location.href = '../index.html';
             }, 2000);
         } else {
             const result = await response.json();
