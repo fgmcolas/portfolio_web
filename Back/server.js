@@ -3,17 +3,15 @@ const cors = require("cors");
 const cookieSession = require("cookie-session");
 const mongoose = require("mongoose");
 
-const dbConfig = require("./config/db.config");
-
 const app = express();
 
 app.use(cors());
-// app.use(
-//   cors({
-//     credentials: true,
-//     origin: ["http://localhost:8080"],
-//   })
-// );
+app.use(
+    cors({
+        credentials: true,
+        origin: ["https://chraumas.vercel.app/"],
+    })
+);
 
 // parse requests of content-type - application/json
 app.use(express.json());
@@ -28,8 +26,6 @@ app.use(
         httpOnly: true
     })
 );
-  
-const db = require("./models");
 
 mongoose
     .connect(`mongodb+srv://fgmcolas:5YGhztwCD8M9xjxk@cluster0.qtw7iwq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`, {

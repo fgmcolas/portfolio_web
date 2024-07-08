@@ -8,7 +8,7 @@ document.getElementById('registerForm').addEventListener('submit', async functio
     console.log("Submission data:", { username, password });
 
     try {
-        const response = await fetch('http://localhost:8080/api/auth/signup', {
+        const response = await fetch('https://intense-taiga-80275-4ea88f913a41.herokuapp.com/api/auth/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
