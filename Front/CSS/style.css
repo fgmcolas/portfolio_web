@@ -1234,6 +1234,7 @@ img.hover-shadow {
     .modal-content>.next {
         padding: 50px;
         top: 40%;
+        z-index: 10;
     }
 
     .mySlides_container {
