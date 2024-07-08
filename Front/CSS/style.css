@@ -1209,6 +1209,55 @@ img.hover-shadow {
         border: solid 0.1rem;
     }
 
+    /* Screenshots section adjustments */
+
+    .screenshots_container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+        grid-gap: 10px;
+    }
+
+    .screenshot {
+        height: 100%;
+        border: none;
+    }
+
+    .numbertext,
+    .close,
+    .modal-content>.prev,
+    .modal-content>.next,
+    #caption {
+        font-size: xxx-large;
+    }
+
+    .modal-content>.prev,
+    .modal-content>.next {
+        padding: 50px;
+        top: 45%;
+    }
+
+    .mySlides_container {
+        position: relative;
+        top: -200px;
+    }
+
+    .mySlides_container img {
+        object-fit: contain;
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    #caption, .column_container {
+        position: relative;
+        top: -600px;
+    }
+
+    .column_container {
+        display: grid;
+        grid-template-columns: repeat(2, 3fr);
+        grid-gap: 10px;
+    }
+
     /* Scroll to top arrow adjustments */
     .toparrow,
     .backtoparrow1,
