@@ -1342,7 +1342,6 @@ img.hover-shadow {
         width: 40vw;
         margin-top: 350px;
     }
-}
 
     /* Scroll to top arrow adjustments */
     .toparrow,
@@ -1353,6 +1352,8 @@ img.hover-shadow {
         transform: translateX(-50%) scaleY(-1);
         left: 50%;
     }
+}
+
 
 
 /*
