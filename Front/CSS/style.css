@@ -371,7 +371,7 @@ h1::after {
     transition: 0.6s ease;
     border-radius: 3px;
     border: none;
-    background-color: var(--dark-text);
+    background-color: var(--light-background);
     user-select: none;
 }
 

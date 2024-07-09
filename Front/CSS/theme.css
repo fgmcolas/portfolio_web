@@ -108,6 +108,11 @@
         color: var(--light-color);
     }
 
+    .darkmode #slides_section>.prev,
+    .darkmode #slides_section>.next {
+        background-color: var(--dark-color);
+    }
+
     @media screen and (max-width: 1050px) {
 
     .btn {
