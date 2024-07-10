@@ -75,7 +75,7 @@ To set up and run this project locally, follow these steps:
 
 3. **Configure the back-end:**
 
-    Update auth.config.js and db.config.js with your configuration details.
+    Update `auth.config.js` and `db.config.js` with your configuration details.
 
 4. **Run the back-end server:**
 
