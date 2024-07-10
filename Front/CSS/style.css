@@ -1265,6 +1265,10 @@ img.hover-shadow {
         display: none;
     }
 
+    .download_link {
+        display: none;
+    }
+
     /* Holberton section adjustments */
     #holberton_container {
         width: 90%;
