@@ -51,6 +51,10 @@ img {
     display: grid;
 }
 
+.container {
+    justify-content: center;
+}
+
 .login__content {
     position: relative;
     height: 100vh;
